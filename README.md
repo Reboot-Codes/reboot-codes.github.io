@@ -6,8 +6,8 @@ My website, made with Next.js, and MDX. Hosted with GitHub Pages and cached by C
 
 ## To-Do
 
-[ ] - Add a projects page.
-[ ] - Add a mastodon feed. ([maybe using this](https://timpurdum.com/2022/11/19/mastodon-feed-in-jekyll.html))
+- [x] Add a projects page. (It's in the home page, duh)
+- [ ] Add a mastodon feed. ([maybe using this](https://timpurdum.com/2022/11/19/mastodon-feed-in-jekyll.html))
 
 ## Creating a post
 
