@@ -22,13 +22,15 @@ const Content = styled.div`
   }
 `;
 
-const Post = ({ readingTime, title, description, date, ogImage, content }) => (
-  <Container>
-    <Content className="md-block">
-      <Header readingTime={readingTime} title={title} description={description} date={date} ogImage={ogImage} />
-      {content}
-    </Content>
-  </Container>
-);
+const Post = ({ readingTime, title, description, date, ogImage, content }) => {
+  return (
+    <Container>
+      <Content className="md-block">
+        <Header readingTime={readingTime} title={title} description={description} date={date} ogImage={ogImage} />
+        {content}
+      </Content>
+    </Container>
+  );
+};
 
 export default Post;

@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { BsCalendar } from 'react-icons/bs';
 import Image from 'next/image';
 
 const Header = styled.div`
@@ -15,10 +14,6 @@ const Meta = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  @media (min-width: 834px) {
-    flex-direction: row;
-  }
 `;
 
 const MetaData = styled.span`
@@ -53,7 +48,7 @@ const PostImage = styled.div`
   }
 `;
 
-const PostHeader = ({ title, description, date, ogImage }) => {
+const PostHeader = ({ title, description, date, ogImage, readingTime }) => {
   let imageUrl = undefined;
   if (ogImage) {
     if (ogImage.url) {
@@ -65,15 +60,19 @@ const PostHeader = ({ title, description, date, ogImage }) => {
     <Header>
       <Meta>
         <Heading>{title}</Heading>
-        {date ? (
-          <MetaData>
-            <BsCalendar /> {date}
-          </MetaData>
-        ) : (
-          <></>
-        )}
+        <Description>{description ? description : <></>}</Description>
+        <MetaData>
+          {readingTime ? <>{readingTime.text}</> : <></>}
+          {date ? (
+            <>
+              {readingTime ? ' • ' : ''}
+              {date}
+            </>
+          ) : (
+            <></>
+          )}
+        </MetaData>
       </Meta>
-      <Description>{description ? description : <></>}</Description>
       {imageUrl ? (
         <PostImage>
           <Image src={'/' + imageUrl} alt="Post image" lazy="loading" layout="fill" objectFit="contain" />

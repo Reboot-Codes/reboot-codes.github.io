@@ -123,19 +123,6 @@ const repos = [
     stargazerCount: 55
   },
   {
-    name: 'Thor-Keyboard',
-    owner: {
-      login: 'Reboot-Codes',
-      url: 'https://github.com/Reboot-Codes'
-    },
-    description: 'My main custom keyboard',
-    forkCount: 0,
-    url: 'https://github.com/Reboot-Codes/Thor-Keyboard',
-    isFork: false,
-    isTemplate: false,
-    stargazerCount: 0
-  },
-  {
     name: 'Cobalt-Bot',
     owner: {
       login: 'Reboot-Codes',
@@ -147,19 +134,6 @@ const repos = [
     isFork: false,
     isTemplate: false,
     stargazerCount: 1
-  },
-  {
-    name: 'Reboot-Codes',
-    owner: {
-      login: 'Reboot-Codes',
-      url: 'https://github.com/Reboot-Codes'
-    },
-    description: 'Profile README.md repo!',
-    forkCount: 0,
-    url: 'https://github.com/Reboot-Codes/Reboot-Codes',
-    isFork: false,
-    isTemplate: false,
-    stargazerCount: 0
   },
   {
     name: 'zap-launcher',
