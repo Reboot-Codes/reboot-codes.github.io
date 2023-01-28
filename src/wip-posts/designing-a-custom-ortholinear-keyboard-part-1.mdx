@@ -1,0 +1,42 @@
+---
+title: Designing a custom ortholinear keyboard. (Part 1)
+description: Since I just can't seem to find one I like.
+date: '2023-01-28T00:00:00-07:00'
+slug: designing-a-custom-ortholinear-keyboard-part-1
+---
+
+So, what do I mean by ortholinear? Basically, a long, long time ago, we had typewritters. These were machines that had a physical spead of buttons that mechanically linked to a thing which had ink on it and smacked a peice of paper to put a shape on it. We call that shape an "alphabet" (or "letter") to create series of words on that paper which we call a document. This spread of buttons (or "keys") was staggared as we had to, again, mechanically link the buttons to the smacking mechanism.
+
+Now, with the advent of much, much more advanced technology, we don't need to staggar the keys anymore. According to _studies_ (don't quote me on that), having a true grid of keys is more ergonomic (better for your joints, tendens, etc) than a staggared layout. It's also probably faster. (And as someone who spends most of their time interfacting with computers using a keyboard, I'd like to avoid RSI, etc.) So I set out to find a good, ortholinear, mechanical keyboard.
+
+Skip to a few years later, I'm tired of looking for something that is easy to purchase, cheap(-er), and looks/sounds nice. Turns out, I either am asking for too much or just aren't skilled enough to find something like that. So, it's time to make it!
+
+## Project Requirements
+
+Obviously ortholinear, but I also want it to have all the keys I'm used to. That would be:
+
+- Programmer's keys (brackets, slashes, tilde, etc)
+- Arrow keys (yes I use (n)vim, but I like the dedicated arrow keys)
+- Modifier keys (CRTL, ALT/OPT, CMD/WIN/SUPER, etc)
+- Numbers (why would you ever put this in a seperate layer)
+
+This is basically asking for a laptop keyboard (see [MacBooks/Apple Magic Keyboard](https://www.apple.com/shop/product/MK2A3LL/A/magic-keyboard-us-english) or the [logitech K380](https://www.logitech.com/en-us/products/keyboards/k380-multi-device.920-009600.html)), but it's commonly known as a 65% keyboard. I don't need/use the fuction keys all that much, so I'm fine with them being on a seperate layer.
+
+I'd also like it to at least use USB-C, bluetooth would be nice but I can drop it if setting it up in QMK is a total pain. LEDs aren't a requirement, but they would be nice if I ever want to use it in the dark. The case itself can be 3D printed, but I'd like to have high compatibility with existing switches and keycaps.
+
+## Planning
+
+With those constraints in mind, I set off to find parts, plans, etc to start at least working on the schematic. A while ago, I had stumbled upon [this blog post/series by masterzen](https://www.masterzen.fr/2020/05/03/designing-a-keyboard-part-1/), and decided to give it a go. I failed very, very hard when it came to trace layout (so, so, so many vias), but I learned a lot.
+
+Mainly what I got was all the components and the general layout that you need for such a keyboard PCB. This consists of:
+
+- Some sort of micro controller (ST Microelectronics seems to be a very popular manufacturer).
+- Switches (duh, that's the point).
+- Diodes (to prevent back driving).
+- Capacitors (keeping the power supply to the microcontroller stable).
+- USB Connector (we need to talk to the computer, and flash somehow).
+- Some other supporting components (as is with microcontroller-based projects).
+
+For the case, I know how to use [FreeCAD](https://www.freecadweb.org/) so designing a case shouldn't be hard. And I'll probably have them both manufactured by [JLC PCB](https://jlcpcb.com/) (since they do printing too, and I'll also probably spring for the asembly because I can't use my soldering iron well enough to not have boundless anxiety when I'm gonna assemble).
+
+The key switches themselves will probably be cherry MX reds or blacks for a smooth feel. I actually like loud and clicky switches, but I want to take this keyboard places too, so I'll settle for smooth operation. (Never used the just tactile before, so no idea how much I'm going to like it.)
