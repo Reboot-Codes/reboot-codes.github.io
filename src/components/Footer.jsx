@@ -185,7 +185,7 @@ export default function Footer() {
         </FooterSection>
       </FooterMain>
       <FooterCopyright>
-        <Text>&copy; {year == 2022 ? '2022' : `2022-${year}`} Ruben Flores, All rights reserved.</Text>
+        <Text>&copy; {year == 2022 ? '2022' : `2022-${year}`} Reboot-Codes, All rights reserved.</Text>
       </FooterCopyright>
     </FooterDiv>
   );
