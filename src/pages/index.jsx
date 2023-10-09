@@ -502,7 +502,7 @@ export default function Home() {
             learned using this website.
           </p>
           <p>
-            I'm always still learning, and I hope to learn more. <em>- Ruben</em> 🎉
+            I'm always still learning, and I hope to learn more. <em>- Ryan</em> 🎉
           </p>
         </AboutMe>
       </AboutSection>
