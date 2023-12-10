@@ -1,0 +1,36 @@
+---
+title: 'Creating ReTunes (Part 1)'
+description: 'Making a standalone server binary.'
+date: '2023-09-11T00:00:00-07:00'
+slug: 'creating-retunes-standalone-server'
+---
+
+Okay, so first, "what is retunes"? Think if you could have a thing on your computer like iTunes (awesome music library management software, mp3 player sync, etc), but have the connectivity that you get from Spotify (listen along, play on smart speaker, etc)? Meet ReTunes!
+
+The point of ReTunes is to let you have a master copy of your media library on one device, and make it easy to sync or stream from that master library. For a lot of people, this can be a normal desktop (like a windows machine, or even a macbook), or you can host the server on your ProxMox install. To do this, we need a server (home server, if you will).
+
+I'm used to using nodejs/yarn or deno. And I tried with deno, created a weird combo thing that used Parcel to bundle front-end code, and deno as the server, but I dropped that because it made no sense to have both node and deno. (Parcel on deno is borked.) So I switched to all node, and using vite in middlewareMode with express. ([See this repo.](https://github.com/vitejs/vite-plugin-react/tree/main/playground/ssr-react)) One problem: I'd like to package this up into a standalone binary.
+
+Why? Because, to provide stuff like mp3 player sync, you _need_ a desktop client. (No, web-USB isn't as prevalent as I'd like it to be, and gott forbid web-bluetooth.) So I elected to use tauri's sidecar feature to embed the server binary into the desktop client. (Side effect: I don't need to snatch the web code from another dir, and just use the server binary even if the user decides to ignore the "home server" bit. Great!)
+
+So? Just pop in `pkg` and compile it!
+
+Not so fast, let's get some things straight first...
+
+## Project Requirements
+
+First, I want to use typescript. Why? Because I have the most experience in it. And it's not that bad if you aren't trying to write a library to be used in nodejs (cjs and esm), browser, deno, bun, that bug on the wall, etc.
+
+Seccond, this needs to be fast enough to the point I _want_ to use it. (I'd've used just Tauri and written a mobile client on the side with RN, but the IPC was so slow, I would have _hated_ using it.)
+
+Third, it needs to be simple enough for my dad to use.
+
+## Repo Setup
+
+Yarn v2 has this cool thing called "workspaces", where you can nest packages within eachother and lets you call 'em as depedancies. It also makes for easy mono-repo management when you throw in Husky and some well written `package.json` scripts.
+
+So let's do that, create a new directory with a git repo, add a `packages` dir that'll hold stuffs for each client/server we create. And create a `server` package. \[Insert about a day's worth of work to just end up throwing away (deno x parcel).\] Then using [that example I mentioned](https://github.com/vitejs/vite-plugin-react/tree/main/playground/ssr-react), I changed a few thing around so it'd work with `ts-node` and have a separate space for api code.
+
+Well, pkg wants me to have a direct JS file (it includes a patched node.js binary, but apparently allowing us to use stuff like a custom ESM loader wouldn't work, we'll get to ESM later...), so, fine, let's use `tsc` aaaaand I misconfigured `tsconfig.json`. Great!
+
+Now, I'm stupid sometimes, so I just asked ChatGPT a few questions and it spat out a good enough solution to have vite compile into it's own `dist-client` and tsc to use `dist-server`, and only tell tsc to compile `server.ts` and the stuff in the api dir. Then, we merge the directories to create a single `dist-package` directory with compiled everything.

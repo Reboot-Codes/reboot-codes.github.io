@@ -72,14 +72,6 @@ export default function Contact() {
             <h1>Using Matrix...</h1>
             <p>A new way of instant messaging, quite similar to email actually.</p>
           </Method>
-          <Method className="transition" href="https://twitter.com/reboot_hasstuff" target="_blank">
-            <h1>Using Twitter...</h1>
-            <p>Ah, that bird platform with the crazy rich people.</p>
-          </Method>
-          <Method className="transition" rel="me" href="https://tiggi.es/@reboot">
-            <h1>Using Mastodon...</h1>
-            <p>Like bird platform, but more open.</p>
-          </Method>
           <Method className="transition" href="https://github.com/Reboot-Codes" target="_blank">
             <h1>Using GitHub...</h1>
             <p>Not really a way to contact me, but you might just want to checkout the source for something.</p>
