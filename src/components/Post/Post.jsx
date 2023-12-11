@@ -14,6 +14,7 @@ const Content = styled.div`
   margin-right: auto;
   max-width: 80ch;
   width: 80ch;
+  max-width: 100%;
   text-align: left;
   font-size: var(--step-up-1);
 

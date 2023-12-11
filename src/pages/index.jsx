@@ -58,6 +58,58 @@ const repos = [
     stargazerCount: 526
   },
   {
+    name: 'RCGI',
+    owner: {
+      login: 'Reboot-Codes',
+      url: 'https://github.com/Reboot-Codes'
+    },
+    description: 'My website, made with Next.js, SSR, and MDX.',
+    forkCount: 0,
+    url: 'https://github.com/Reboot-Codes/website',
+    isFork: false,
+    isTemplate: false,
+    stargazerCount: 1
+  },
+  {
+    name: 'OpenCar',
+    owner: {
+      login: 'Reboot-Codes',
+      url: 'https://github.com/Reboot-Codes'
+    },
+    description: 'An open and free car operating system.',
+    url: 'https://github.com/Reboot-Codes/open-car',
+    isFork: false,
+    isTemplate: false,
+    stargazerCount: 1
+  },
+  {
+    name: 'ReUtils',
+    owner: {
+      login: 'Reboot-Codes',
+      url: 'https://github.com/Reboot-Codes'
+    },
+    description: 'A general utility plugin for Minecraft servers.',
+    forkCount: 0,
+    url: 'https://github.com/Reboot-Codes/ReUtils',
+    isFork: false,
+    isTemplate: false,
+    stargazerCount: 1
+  },
+  {
+    name: 'DND.local',
+    owner: {
+      login: 'Reboot-Codes',
+      url: 'https://github.com/Reboot-Codes'
+    },
+    description: 'Like D&D Beyond, but local.',
+    forkCount: 0,
+    url: 'https://github.com/Reboot-Codes/dnd-dot-local',
+    isFork: false,
+    isTemplate: false,
+    stargazerCount: 2
+  }
+  /*
+  {
     name: 'denologger',
     owner: {
       login: 'Reboot-Codes',
@@ -79,31 +131,6 @@ const repos = [
     description: 'A quick CLI to create a Discordeno Bot. ',
     forkCount: 0,
     url: 'https://github.com/Reboot-Codes/create-discordeno-bot',
-    isFork: false,
-    isTemplate: false,
-    stargazerCount: 1
-  },
-  {
-    name: 'website',
-    owner: {
-      login: 'Reboot-Codes',
-      url: 'https://github.com/Reboot-Codes'
-    },
-    description: 'My website, made with Next.js, SSR, and MDX.',
-    forkCount: 0,
-    url: 'https://github.com/Reboot-Codes/website',
-    isFork: false,
-    isTemplate: false,
-    stargazerCount: 1
-  },
-  {
-    name: 'open-car',
-    owner: {
-      login: 'Reboot-Codes',
-      url: 'https://github.com/Reboot-Codes'
-    },
-    description: 'An open and free car operating system.',
-    url: 'https://github.com/Reboot-Codes/open-car',
     isFork: false,
     isTemplate: false,
     stargazerCount: 1
@@ -148,7 +175,7 @@ const repos = [
     isFork: false,
     isTemplate: false,
     stargazerCount: 2
-  }
+  }*/
 ];
 
 const HeroSection = styled.div`
@@ -217,7 +244,7 @@ const GHCard = styled.div`
   padding: 12px;
 
   &:hover {
-    background-color: var(--brand-300);
+    background-color: var(--green-300);
     color: var(--black);
     border-color: rgba(127.5, 127.5, 127.5, 0);
   }
@@ -290,7 +317,7 @@ const Technology = styled.a`
   padding: 12px;
 
   &:hover {
-    background-color: var(--brand-300);
+    background-color: var(--green-300);
     color: var(--black);
     border-color: rgba(127.5, 127.5, 127.5, 0);
   }

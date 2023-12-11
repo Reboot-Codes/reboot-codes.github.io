@@ -12,6 +12,12 @@ const PostContainer = styled.div`
   justify-content: center;
   cursor: pointer;
   border: 1px solid rgba(127.5, 127.5, 127.5, 0.8);
+
+  &:hover {
+    background-color: var(--green-300);
+    color: var(--black);
+    border-color: rgba(127.5, 127.5, 127.5, 0);
+  }
 `;
 
 const PostImage = styled.div`
@@ -40,7 +46,7 @@ export default function PostItem({ article }) {
 
   return (
     <Link as={`/blog/${article.slug}`} href="/blog/[slug]">
-      <PostContainer>
+      <PostContainer className="transition">
         {/*imageUrl ? (
           <PostImage>
             <Image src={imageUrl} alt="Post image" lazy="loading" layout="fill" objectFit="contain" />

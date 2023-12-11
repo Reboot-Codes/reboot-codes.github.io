@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import dayjs from 'dayjs';
-import { BsGithub, BsCodeSquare, BsRssFill } from 'react-icons/bs';
+import { BsGithub, BsCodeSquare, BsRss } from 'react-icons/bs';
 
 const FooterDiv = styled.div`
   max-width: 90vw;
@@ -93,11 +93,19 @@ const SocialButton = styled.a`
   background-color: var(--contrast);
   border-radius: 5px;
   margin-right: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 
   &:hover {
-    background-color: var(--brand-300);
+    background-color: var(--green-300);
     color: var(--black);
   }
+`;
+
+const SocialButtonText = styled.span`
+  margin-left: 6px;
 `;
 
 const TechLink = styled.a`
@@ -172,14 +180,27 @@ export default function Footer() {
             .
           </p>
           <Socials>
-            <SocialButton href="https://github.com/Reboot-Codes" target="_blank" rel="noopener noreferrer">
-              <BsGithub /> GitHub
+            <SocialButton
+              href="https://github.com/Reboot-Codes"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition"
+            >
+              <BsGithub />
+              <SocialButtonText>GitHub</SocialButtonText>
             </SocialButton>
-            <SocialButton href="https://github.com/Reboot-Codes/website" target="_blank" rel="noopener noreferrer">
-              <BsCodeSquare /> Source
+            <SocialButton
+              href="https://github.com/Reboot-Codes/website"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition"
+            >
+              <BsCodeSquare />
+              <SocialButtonText>Source</SocialButtonText>
             </SocialButton>
-            <SocialButton href="/feed.rss" target="_blank">
-              <BsRssFill /> RSS Feed
+            <SocialButton href="/feed.rss" target="_blank" className="transition">
+              <BsRss />
+              <SocialButtonText>RSS Feed</SocialButtonText>
             </SocialButton>
           </Socials>
         </FooterSection>

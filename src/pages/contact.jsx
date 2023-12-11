@@ -43,7 +43,7 @@ const Method = styled.a`
   padding: 12px;
 
   &:hover {
-    background-color: var(--brand-300);
+    background-color: var(--green-300);
     color: var(--black);
     border-color: rgba(127.5, 127.5, 127.5, 0);
   }

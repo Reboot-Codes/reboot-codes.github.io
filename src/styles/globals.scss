@@ -45,6 +45,20 @@
   }
 }
 
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 0.00000001px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 0.00000001px;
+}
+
+.w-full {
+  width: 100%;
+}
+
 .custom-img {
   object-fit: contain;
   width: 100% !important;
