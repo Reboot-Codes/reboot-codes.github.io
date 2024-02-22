@@ -56,7 +56,7 @@ export default function FourOhFour() {
   return (
     <>
       <Head>
-        <title>Reboot-Codes: Not Found</title>
+        <title>ReVerse: Not Found</title>
       </Head>
       <Container>
         <NotFound />

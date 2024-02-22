@@ -53,11 +53,11 @@ export default function Contact() {
   return (
     <>
       <Head>
-        <title>Reboot-Codes: Contact</title>
+        <title>ReVerse: Contact</title>
       </Head>
       <ContactSection>
         <SideSection>
-          <SideHeader>Contact Me...</SideHeader>
+          <SideHeader>Contact Us...</SideHeader>
           <p>
             Hey, looks like you want to get in touch! Well, you've come to the right place. Click on your favorite
             method and let the fancy links take you to where you want to go.
@@ -74,7 +74,7 @@ export default function Contact() {
           </Method>
           <Method className="transition" href="https://github.com/Reboot-Codes" target="_blank">
             <h1>Using GitHub...</h1>
-            <p>Not really a way to contact me, but you might just want to checkout the source for something.</p>
+            <p>Not really a way to contact us, but you might just want to checkout the source for something.</p>
           </Method>
         </Content>
       </ContactSection>

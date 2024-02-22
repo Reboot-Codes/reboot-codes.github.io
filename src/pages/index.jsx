@@ -14,6 +14,7 @@ import {
   SiRedis
 } from 'react-icons/si';
 import { BsPlugFill } from 'react-icons/bs';
+import { NextSeo } from 'next-seo';
 
 // placeholder generated from:
 /*
@@ -222,6 +223,71 @@ const AboutText = styled.p`
   margin-top: 5px;
 `;
 
+const Members = styled.div`
+  width: 100%;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr;
+  margin: 0 12px;
+
+  @media (min-width: 768px) {
+    grid-template-columns: calc(50% - 6px) calc(50% - 6px);
+  }
+`;
+
+const Member = styled.a`
+  display: block;
+  border: 1px solid rgba(127.5, 127.5, 127.5, 0.8);
+  border-radius: 5px;
+  padding: 12px;
+
+  &:hover {
+    background-color: var(--green-300);
+    color: var(--black);
+    border-color: rgba(127.5, 127.5, 127.5, 0);
+  }
+`;
+
+const MemberName = styled.h1`
+  font-size: var(--step-up-2);
+`;
+
+const MemberPronouns = styled.p`
+  font-size: var(--step-up-1);
+  opacity: 80%;
+`;
+
+const MemberDesc = styled.p`
+  margin-top: 5px;
+  opacity: 80%;
+`;
+
+const GHSection = styled.div`
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 12px;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+`;
+
+const GHSectionMini = styled.div`
+  padding-bottom: 32px;
+
+  @media (min-width: 1084px) {
+    min-width: 450px;
+  }
+`;
+
+const GHHeader = styled.h1`
+  font-weight: bold;
+`;
+
+const GHText = styled.p``;
+
 const GHRepos = styled.div`
   width: 100%;
   display: grid;
@@ -371,7 +437,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Reboot-Codes: Home</title>
+        <NextSeo title={`ReVerse: Home`} description={''} openGraph={{ url: 'https://reboot-codes.com/' }} />
+        <title>ReVerse: Home</title>
       </Head>
 
       <HeroSection>
@@ -382,8 +449,46 @@ export default function Home() {
             <AboutSpace> </AboutSpace>
             computers since 2019.
           </AboutHeading>
-          <AboutText>Here are some repo's I've contributed to.</AboutText>
+          <AboutText>We're a system! (Note: this might not be up to date.)</AboutText>
         </About>
+        <Members>
+          <Member className="transition" href="/members/dead_d0g">
+            <MemberName>dead_d0g</MemberName>
+            <MemberPronouns>They/Them, It, Pup, Ryan, Ry, dead_d0g, Reboot, DD.</MemberPronouns>
+            <MemberDesc>
+              Trans-Enby Dogthing that loves computers/tech/engineering. <code>:3</code>
+            </MemberDesc>
+          </Member>
+          <Member className="transition" href="/members/ryan">
+            <MemberName>Ryan</MemberName>
+            <MemberPronouns>They/Them, It, Pup, Ryan, Ry, Reboot.</MemberPronouns>
+            <MemberDesc>
+              Trans-Enby Dogthing that also loves computers/tech/engineering (copy of DD). <code>X3</code>
+            </MemberDesc>
+          </Member>
+          <Member className="transition" href="/members/hunter">
+            <MemberName>Hunter</MemberName>
+            <MemberPronouns>He/Him, They/Them, Hunter, gh0st.</MemberPronouns>
+            <MemberDesc>Most protective werewolf, does hacking and mechanicing-ish.</MemberDesc>
+          </Member>
+          <Member className="transition" href="/members/alex">
+            <MemberName>Alex</MemberName>
+            <MemberPronouns>He/Him, They/Them, Alex.</MemberPronouns>
+            <MemberDesc>British DogMan, writes nice things.</MemberDesc>
+          </Member>
+          <Member className="transition" href="/members/system">
+            <MemberName>System</MemberName>
+            <MemberPronouns>It, System, Sys.</MemberPronouns>
+            <MemberDesc>Failsafe robot (perhaps RoboDoggo)!</MemberDesc>
+          </Member>
+        </Members>
+      </HeroSection>
+
+      <GHSection>
+        <GHSectionMini>
+          <GHHeader>Here's some repos we've contributed to.</GHHeader>
+          <GHText>We don't update this regularly, go check out our GitHub!</GHText>
+        </GHSectionMini>
         <GHRepos>
           {repos.map((repo, id) => (
             <GHCard key={id} className="transition">
@@ -411,12 +516,12 @@ export default function Home() {
             </GHCard>
           ))}
         </GHRepos>
-      </HeroSection>
+      </GHSection>
 
       <TechnologiesSection>
         <TechSection>
           <TechHeader>Tools of the Trade.</TechHeader>
-          <TechText>Here is a comprehensive list of technologies I have used in projects.</TechText>
+          <TechText>Here is a comprehensive list of technologies we've used in projects.</TechText>
         </TechSection>
 
         <Technologies>
@@ -510,7 +615,7 @@ export default function Home() {
 
       <AboutSection>
         <MiniAboutSection>
-          <AboutHeader>A bit more about me.</AboutHeader>
+          <AboutHeader>A bit more about us.</AboutHeader>
           <AboutBlurb>
             If you don't care about back story or are bored by big walls of words, you can skip this section.
           </AboutBlurb>
@@ -529,7 +634,7 @@ export default function Home() {
             learned using this website.
           </p>
           <p>
-            I'm always still learning, and I hope to learn more. <em>- Ryan</em> 🎉
+            I'm always still learning, and I hope to learn more. <em>- Dead_D0g</em> 🎉
           </p>
         </AboutMe>
       </AboutSection>

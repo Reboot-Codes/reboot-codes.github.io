@@ -30,7 +30,7 @@ export default function Blog({ articles }) {
   return (
     <>
       <Head>
-        <title>Reboot-Codes: Blog</title>
+        <title>ReVerse: Blog</title>
       </Head>
       <PostsHeading>Checkout the Blog.</PostsHeading>
       <p>

@@ -28,7 +28,7 @@ export default function Slug({ readingTime, frontMatter, slug, source }) {
 
   return (
     <div>
-      <NextSeo title={`Reboot's Blog: ${frontMatter.title}`} description={frontMatter.description} openGraph={ogObj} />
+      <NextSeo title={`ReVerse: ${frontMatter.title}`} description={frontMatter.description} openGraph={ogObj} />
       <Post
         readingTime={readingTime}
         title={frontMatter.title}
