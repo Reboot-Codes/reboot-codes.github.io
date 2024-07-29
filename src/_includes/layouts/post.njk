@@ -1,0 +1,24 @@
+---
+layout: base.njk
+isBlog: true
+---
+
+<h1>{{ title }}</h1>
+
+{% if ((tags | length) > 1) %}
+  <h2>Tags</h2>
+  <ul>
+    {% for tag in tags %}
+      {% if tag != "post" %}
+        {% if (tag | startsWith("project:")) %}
+          <li><a href="/projects/{{ tag | strSlice(8) }}">Project: {% for project in collections.allProjects %}{% if (project.data.projectId == (tag | strSlice(8))) %}{{ project.data.title }}{% endif %}{% endfor %}</a></li>
+        {% else %}
+          <li><a>{{ tag }}</a></li>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% endif %}
+
+{{ content | safe }}
+

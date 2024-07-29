@@ -1,0 +1,54 @@
+{
+  "site": {
+    "title": "Reboot/Fitz"
+  },
+  "blog": {
+    "title": "Reboot/Fitz's Blog"
+  },
+  "workshop": {
+    "title": "Reboot/Fitz's Workshop"
+  },
+  "self": {
+    "generalName": "Reboot/Fitz",
+    "generalPronouns": "they/them",
+    "members": {
+      "dead_d0g": {
+        "name": "Ryan",
+        "username": "dead_d0g",
+        "preferredPronouns": [
+          "it/its",
+          "they/them/theirs"
+        ],
+        "discouragedPronouns": [
+          "he/him/his"
+        ],
+        "unacceptablePronouns": [
+          "she/her/hers"
+        ]
+      },
+      "gh0st": {
+        "name": "Hunter",
+        "username": "g.h0st",
+        "preferredPronouns": [
+          "he/him/his",
+          "it/its",
+          "they/them/theirs"
+        ],
+        "discouragedPronouns": [],
+        "unacceptablePronouns": [
+          "she/her/hers"
+        ]
+      },
+      "system": {
+        "name": "System",
+        "username": "system",
+        "preferredPronouns": [
+          "it/its",
+          "they/them/theirs"
+        ],
+        "discouragedPronouns": [],
+        "unacceptablePronouns": []
+      }
+    }
+  }
+}

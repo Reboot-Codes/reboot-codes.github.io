@@ -1,0 +1,20 @@
+---
+layout: base.njk
+isProject: true
+pagination:
+  size: 2
+---
+
+<h1>{{ title }}</h1>
+
+{{ content | safe }}
+
+<h2>Posts</h2>
+
+<ul>
+{%- for item in pagination.items %}
+  <li><a href="{{ item.page.url }}">{{ item.data.title }}</a></li>
+{% endfor -%}
+</ul>
+
+{% include "components/pagination.njk" %}

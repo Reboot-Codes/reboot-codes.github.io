@@ -1,0 +1,8 @@
+{
+  "name": "rebootfitz-newsite",
+  "dependencies": {
+    "@11ty/eleventy": ">=3.0.0-alpha.15",
+    "@11ty/eleventy-plugin-rss": "^2.0.2",
+    "sass": "^1.77.8"
+  }
+}

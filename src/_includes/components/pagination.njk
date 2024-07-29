@@ -1,0 +1,11 @@
+{% if ((pagination.hrefs | length) > 1) %}
+  <ul>
+    <li><a href="{{ pagination.hrefs[0] }}"{% if page.url == pagination.hrefs[0] %} aria-current="page"{% endif %}>First</a></li>
+    <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Previous</a>{% else %}Previous{% endif %}</li>
+    {%- for pageEntry in pagination.pages %}
+      <li><a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>Page {{ loop.index }}</a></li>
+    {%- endfor %}
+    <li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next</a>{% else %}Next{% endif %}</li>
+    <li><a href="{{ pagination.hrefs[(pagination.hrefs | length) - 1] }}"{% if page.url == pagination.hrefs[-1] %} aria-current="page"{% endif %}>Last</a></li>
+  </ul>
+{% endif %}

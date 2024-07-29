@@ -1,0 +1,22 @@
+---
+isBlog: false
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {% if isBlog %}{{ generalData.blog.title }}{% elif isProject %}{{ generalData.workshop.title }}{% else %}{{ generalData.site.title }}{% endif %}{% if title %} - {{ title }}{% endif %}
+    </title>
+    <link rel="stylesheet" href="/styles/global.css" />
+  </head>
+  <body>
+    {% include "components/navigation.njk" %}
+    <main>
+      {{ content | safe }}
+    </main>
+    {% include "components/footer.njk" %}
+  </body>
+</html>

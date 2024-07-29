@@ -1,0 +1,17 @@
+---
+title: Projects
+isProject: true
+pagination:
+  data: collections.allProjects
+  size: 2
+---
+
+<h1>{{ title }}</h1>
+
+<ul>
+{%- for item in pagination.items %}
+  <li><a href="{{ item.page.url }}">{{ item.data.title }}</a></li>
+{% endfor -%}
+</ul>
+
+{% include "components/pagination.njk" %}
