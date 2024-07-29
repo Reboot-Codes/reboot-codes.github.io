@@ -3,15 +3,34 @@ title: Posts
 isBlog: true
 pagination:
   data: collections.allPosts
-  size: 2
+  size: 1
 ---
 
-<h1>{{ title }}</h1>
+<h1>The DIY Bog</h1>
+
+<h2>Tags</h2>
+
+{% if ((collections.all | getAllTags | filterTagList) | length) > 0 %}
+<p>Find posts of a specific subect.</p>
 
 <ul>
-{%- for item in pagination.items %}
-  <li><a href="{{ item.page.url }}">{{ item.data.title }}</a></li>
-{% endfor -%}
+  {% for tag in collections.all | getAllTags | filterTagList %}
+    <li><a href="/tags/{{ tag }}/">{{ tag }}</a></li>
+  {% endfor %}
 </ul>
+{% else %}
+<p>No tags yet...</p>
+{% endif %}
+
+<h2>Posts</h2>
+
+<div id="posts-list" class="post-list">
+{%- for item in pagination.items %}
+  <article id="post-{{ loop.index }}" class="post">
+    <a href="{{ item.page.url }}">{{ item.data.title }}</a>
+    <p>on {{ item.page.date | formatDate }}, takes {{ item.content | timeToRead }} to read.</p>
+  </article>
+{% endfor -%}
+</div>
 
 {% include "components/pagination.njk" %}

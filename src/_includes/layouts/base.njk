@@ -1,5 +1,6 @@
 ---
 isBlog: false
+useContainer: true
 ---
 
 <!DOCTYPE html>
@@ -7,14 +8,12 @@ isBlog: false
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-      {% if isBlog %}{{ generalData.blog.title }}{% elif isProject %}{{ generalData.workshop.title }}{% else %}{{ generalData.site.title }}{% endif %}{% if title %} - {{ title }}{% endif %}
-    </title>
+    <title>{% include "copywriting/title.njk" %}</title>
     <link rel="stylesheet" href="/styles/global.css" />
   </head>
   <body>
     {% include "components/navigation.njk" %}
-    <main>
+    <main id="page-content" {% if useContainer %}class="page-container"{% endif %}>
       {{ content | safe }}
     </main>
     {% include "components/footer.njk" %}

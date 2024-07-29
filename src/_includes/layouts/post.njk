@@ -1,24 +1,30 @@
 ---
 layout: base.njk
 isBlog: true
+useContainer: true
 ---
 
 <h1>{{ title }}</h1>
 
+<p>on {{ page.date | formatDate }}, takes {{ content | timeToRead }} to read.</p>
+
+<h2>Tags</h2>
 {% if ((tags | length) > 1) %}
-  <h2>Tags</h2>
-  <ul>
-    {% for tag in tags %}
-      {% if tag != "post" %}
-        {% if (tag | startsWith("project:")) %}
-          <li><a href="/projects/{{ tag | strSlice(8) }}">Project: {% for project in collections.allProjects %}{% if (project.data.projectId == (tag | strSlice(8))) %}{{ project.data.title }}{% endif %}{% endfor %}</a></li>
-        {% else %}
-          <li><a>{{ tag }}</a></li>
-        {% endif %}
+<ul>
+  {% for tag in tags %}
+    {% if tag != "post" %}
+      {% if (tag | startsWith("project:")) %}
+        <li><a href="/projects/{{ tag | strSlice(8) }}">Project: {% for project in collections.allProjects %}{% if (project.data.projectId == (tag | strSlice(8))) %}{{ project.data.title }}{% endif %}{% endfor %}</a></li>
+      {% else %}
+        <li><a href="/tags/{{ tag }}">{{ tag }}</a></li>
       {% endif %}
-    {% endfor %}
-  </ul>
+    {% endif %}
+  {% endfor %}
+</ul>
+{% else %}
+<p>No tags</p>
 {% endif %}
 
+<div id="post-content" class="content">
 {{ content | safe }}
-
+<div>

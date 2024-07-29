@@ -1,11 +1,52 @@
 {% if ((pagination.hrefs | length) > 1) %}
-  <ul>
-    <li><a href="{{ pagination.hrefs[0] }}"{% if page.url == pagination.hrefs[0] %} aria-current="page"{% endif %}>First</a></li>
-    <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Previous</a>{% else %}Previous{% endif %}</li>
-    {%- for pageEntry in pagination.pages %}
-      <li><a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>Page {{ loop.index }}</a></li>
-    {%- endfor %}
-    <li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next</a>{% else %}Next{% endif %}</li>
-    <li><a href="{{ pagination.hrefs[(pagination.hrefs | length) - 1] }}"{% if page.url == pagination.hrefs[-1] %} aria-current="page"{% endif %}>Last</a></li>
+  <ul {% if paginationId %}id="{{ paginationId }}"{% endif %} class="pagination{% if paginationClasses %}{{ paginationClasses }}{% endif %}">
+    <li {% if paginationId %}id="{{ paginationId }}-first"{% endif %} class="pagination-first pagination-control"{% if page.url == pagination.hrefs[0] %} aria-current="page">First{% else %}><a href="{{ pagination.hrefs[0] }}">First</a>{% endif %}</li>
+    <li {% if paginationId %}id="{{ paginationId }}-previous"{% endif %} class="pagination-previous pagination-control"{% if pagination.href.previous %}><a href="{{ pagination.href.previous }}">Previous</a>{% else %} aria-current="page">Previous{% endif %}</li>
+
+    
+    {% if ((pagination.pages | length) > 5) %}
+      {% if pagination.pageNumber == 0 %}
+      <li{% if paginationId %}id="{{ paginationId }}-item-{{ pagination.pageNumber + 1 }}" {% endif %} class="pagination-item pagination-control" aria-current="page">Page {{ pagination.pageNumber + 1 }}</li>
+      <li{% if paginationId %}id="{{ paginationId }}-item-{{ pagination.pageNumber + 2 }}" {% endif %} class="pagination-item pagination-control"><a href="{{ pagination.hrefs[pagination.pageNumber + 1] }}">Page {{ pagination.pageNumber + 2 }}</a></li>
+      <li{% if paginationId %}id="{{ paginationId }}-item-{{ pagination.pageNumber + 3 }}" {% endif %} class="pagination-item pagination-control"><a href="{{ pagination.hrefs[pagination.pageNumber + 2] }}">Page {{ pagination.pageNumber + 3 }}</a></li>
+      <li{% if paginationId %}id="{{ paginationId }}-item-{{ pagination.pageNumber + 4 }}" {% endif %} class="pagination-item pagination-control"><a href="{{ pagination.hrefs[pagination.pageNumber + 3] }}">Page {{ pagination.pageNumber + 4 }}</a></li>
+      <li{% if paginationId %}id="{{ paginationId }}-item-{{ pagination.pageNumber + 5 }}" {% endif %} class="pagination-item pagination-control"><a href="{{ pagination.hrefs[pagination.pageNumber + 4] }}">Page {{ pagination.pageNumber + 5 }}</a></li>
+
+      {% elif pagination.pageNumber == 1 %}
+      <li{% if paginationId %}id="{{ paginationId }}-item-{{ pagination.pageNumber }}" {% endif %} class="pagination-item pagination-control"><a href="{{ pagination.hrefs[pagination.pageNumber - 1] }}">Page {{ pagination.pageNumber }}</a></li>
+      <li{% if paginationId %}id="{{ paginationId }}-item-{{ pagination.pageNumber + 1 }}" {% endif %} class="pagination-item pagination-control" aria-current="page">Page {{ pagination.pageNumber + 1 }}</li>
+      <li{% if paginationId %}id="{{ paginationId }}-item-{{ pagination.pageNumber + 2 }}" {% endif %} class="pagination-item pagination-control"><a href="{{ pagination.hrefs[pagination.pageNumber + 1] }}">Page {{ pagination.pageNumber + 2 }}</a></li>
+      <li{% if paginationId %}id="{{ paginationId }}-item-{{ pagination.pageNumber + 3 }}" {% endif %} class="pagination-item pagination-control"><a href="{{ pagination.hrefs[pagination.pageNumber + 2] }}">Page {{ pagination.pageNumber + 3 }}</a></li>
+      <li{% if paginationId %}id="{{ paginationId }}-item-{{ pagination.pageNumber + 4 }}" {% endif %} class="pagination-item pagination-control"><a href="{{ pagination.hrefs[pagination.pageNumber + 3] }}">Page {{ pagination.pageNumber + 4 }}</a></li>
+
+      {% elif pagination.pageNumber == ((pagination.pages | length) - 2) %}
+      <li{% if paginationId %}id="{{ paginationId }}-item-{{ pagination.pageNumber - 2 }}" {% endif %} class="pagination-item pagination-control"><a href="{{ pagination.hrefs[pagination.pageNumber - 3] }}">Page {{ pagination.pageNumber - 2 }}</a></li>
+      <li{% if paginationId %}id="{{ paginationId }}-item-{{ pagination.pageNumber - 1 }}" {% endif %} class="pagination-item pagination-control"><a href="{{ pagination.hrefs[pagination.pageNumber - 2] }}">Page {{ pagination.pageNumber - 1 }}</a></li>
+      <li{% if paginationId %}id="{{ paginationId }}-item-{{ pagination.pageNumber }}" {% endif %} class="pagination-item pagination-control"><a href="{{ pagination.hrefs[pagination.pageNumber - 1] }}">Page {{ pagination.pageNumber }}</a></li>
+      <li{% if paginationId %}id="{{ paginationId }}-item-{{ pagination.pageNumber + 1 }}" {% endif %} class="pagination-item pagination-control" aria-current="page">Page {{ pagination.pageNumber + 1 }}</li>
+      <li{% if paginationId %}id="{{ paginationId }}-item-{{ pagination.pageNumber + 2 }}" {% endif %} class="pagination-item pagination-control"><a href="{{ pagination.hrefs[pagination.pageNumber + 1] }}">Page {{ pagination.pageNumber + 2 }}</a></li>
+
+      {% elif pagination.pageNumber == ((pagination.pages | length) - 1) %}
+      <li{% if paginationId %}id="{{ paginationId }}-item-{{ pagination.pageNumber - 3 }}" {% endif %} class="pagination-item pagination-control"><a href="{{ pagination.hrefs[pagination.pageNumber - 4] }}">Page {{ pagination.pageNumber - 3 }}</a></li>
+      <li{% if paginationId %}id="{{ paginationId }}-item-{{ pagination.pageNumber - 2 }}" {% endif %} class="pagination-item pagination-control"><a href="{{ pagination.hrefs[pagination.pageNumber - 3] }}">Page {{ pagination.pageNumber - 2 }}</a></li>
+      <li{% if paginationId %}id="{{ paginationId }}-item-{{ pagination.pageNumber - 1 }}" {% endif %} class="pagination-item pagination-control"><a href="{{ pagination.hrefs[pagination.pageNumber - 2] }}">Page {{ pagination.pageNumber - 1 }}</a></li>
+      <li{% if paginationId %}id="{{ paginationId }}-item-{{ pagination.pageNumber }}" {% endif %} class="pagination-item pagination-control"><a href="{{ pagination.hrefs[pagination.pageNumber - 1] }}">Page {{ pagination.pageNumber }}</a></li>
+      <li{% if paginationId %}id="{{ paginationId }}-item-{{ pagination.pageNumber + 1 }}" {% endif %} class="pagination-item pagination-control" aria-current="page">Page {{ pagination.pageNumber + 1 }}</li>
+
+      {% else %}
+      <li{% if paginationId %}id="{{ paginationId }}-item-{{ pagination.pageNumber - 1 }}" {% endif %} class="pagination-item pagination-control"><a href="{{ pagination.hrefs[pagination.pageNumber - 2] }}">Page {{ pagination.pageNumber - 1 }}</a></li>
+      <li{% if paginationId %}id="{{ paginationId }}-item-{{ pagination.pageNumber }}" {% endif %} class="pagination-item pagination-control"><a href="{{ pagination.hrefs[pagination.pageNumber - 1] }}">Page {{ pagination.pageNumber }}</a></li>
+      <li{% if paginationId %}id="{{ paginationId }}-item-{{ pagination.pageNumber + 1 }}" {% endif %} class="pagination-item pagination-control" aria-current="page">Page {{ pagination.pageNumber + 1 }}</li>
+      <li{% if paginationId %}id="{{ paginationId }}-item-{{ pagination.pageNumber + 2 }}" {% endif %} class="pagination-item pagination-control"><a href="{{ pagination.hrefs[pagination.pageNumber + 1] }}">Page {{ pagination.pageNumber + 2 }}</a></li>
+      <li{% if paginationId %}id="{{ paginationId }}-item-{{ pagination.pageNumber + 3 }}" {% endif %} class="pagination-item pagination-control"><a href="{{ pagination.hrefs[pagination.pageNumber + 2] }}">Page {{ pagination.pageNumber + 3 }}</a></li>
+      {% endif %}
+    {% else %}
+      {% for pageEntry in pagination.pages %}
+        <li{% if paginationId %}id="{{ paginationId }}-item-{{ loop.index }}" {% endif %} class="pagination-item pagination-control" {% if page.url == pagination.hrefs[loop.index - 1] %} aria-current="page">Page {{ loop.index }}{% else %}><a href="{{ pagination.hrefs[ loop.index0 ] }}">Page {{ loop.index }}</a>{% endif %}</li>
+      {% endfor %}
+    {% endif %}
+
+    <li{% if paginationId %}id="{{ paginationId }}-next" {% endif %} class="pagination-next pagination-control"{% if pagination.href.next %}><a href="{{ pagination.href.next }}">Next</a>{% else %} aria-current="page">Next{% endif %}</li>
+    <li{% if paginationId %}id="{{ paginationId }}-last" {% endif %} class="pagination-last pagination-control"{% if page.url == pagination.hrefs[(pagination.hrefs | length) - 1] %} aria-current="page">Last{% else %}><a href="{{ pagination.hrefs[(pagination.hrefs | length) - 1] }}">Last</a>{% endif %}</li>
   </ul>
 {% endif %}

@@ -719,6 +719,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"eleventy-plugin-time-to-read@npm:^1.3.0":
+  version: 1.3.0
+  resolution: "eleventy-plugin-time-to-read@npm:1.3.0"
+  peerDependencies:
+    "@11ty/eleventy": "*"
+  peerDependenciesMeta:
+    "@11ty/eleventy":
+      optional: true
+  checksum: 10c0/521cf2a152d7e58175784a5e4d07d1c338082602da3c7192a249cd0072c6de1718dccc6a7edaddcaff3eab41839dc5df7a160fa39f0dd9029c324b6ad2241213
+  languageName: node
+  linkType: hard
+
 "emoji-regex@npm:^8.0.0":
   version: 8.0.0
   resolution: "emoji-regex@npm:8.0.0"
@@ -1432,6 +1444,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"markdown-it-anchor@npm:^9.0.1":
+  version: 9.0.1
+  resolution: "markdown-it-anchor@npm:9.0.1"
+  peerDependencies:
+    "@types/markdown-it": "*"
+    markdown-it: "*"
+  checksum: 10c0/8ebae5e591ff62f981a843b2eda9237f0610bbe0aea8fc5f7bf4a8a8699f429aa004b39df0f241ec0422a14ef1ec700aeefa5402f25263d89201017c56fb874d
+  languageName: node
+  linkType: hard
+
 "markdown-it@npm:^14.1.0":
   version: 14.1.0
   resolution: "markdown-it@npm:14.1.0"
@@ -1941,6 +1963,9 @@ __metadata:
   dependencies:
     "@11ty/eleventy": "npm:>=3.0.0-alpha.15"
     "@11ty/eleventy-plugin-rss": "npm:^2.0.2"
+    eleventy-plugin-time-to-read: "npm:^1.3.0"
+    markdown-it: "npm:^14.1.0"
+    markdown-it-anchor: "npm:^9.0.1"
     sass: "npm:^1.77.8"
   languageName: unknown
   linkType: soft

@@ -1,9 +1,17 @@
 const sass = require("sass");
 const { feedPlugin } = require("@11ty/eleventy-plugin-rss");
+const markdownIt = require("markdown-it");
+const markdownItAnchor = require("markdown-it-anchor");
+const timeToRead = require('eleventy-plugin-time-to-read');
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addTemplateFormats("scss");
+	const md = markdownIt({ "html": true }).use(markdownItAnchor, { 
+		"level": 2,
+		permalink: markdownItAnchor.permalink.headerLink()
+	});
+  eleventyConfig.setLibrary("md", md);
 
+  eleventyConfig.addTemplateFormats("scss");
 	// Creates the extension for use
 	eleventyConfig.addExtension("scss", {
 		outputFileExtension: "css", // optional, default: "html"
@@ -18,6 +26,10 @@ module.exports = function (eleventyConfig) {
 			};
 		},
 	});
+
+	eleventyConfig.addPlugin(timeToRead, {
+    speed: '250 words a minute'
+  });
 
 	eleventyConfig.addCollection(
 		"allPosts",
@@ -59,6 +71,48 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addFilter("strSlice", function(str, num) {
 		return str.slice(num);
 	});
+
+	// Return all the tags used in a collection
+	eleventyConfig.addFilter("getAllTags", collection => {
+		let tagSet = new Set();
+		for(let item of collection) {
+			(item.data.tags || []).forEach(tag => tagSet.add(tag));
+		}
+		return Array.from(tagSet);
+	});
+
+	eleventyConfig.addFilter("filterTagList", function filterTagList(tags) {
+		return (tags || []).filter(tag => ["all", "post", "allPosts", "project", "allProjects"].indexOf(tag) === -1).filter((tag) => (!(tag.startsWith("project:"))));
+	});
+
+	const parseDate = (str) => {
+    if (str instanceof Date) {
+      return str;
+    }
+    return Date.parse(str);
+  };
+
+  const formatPart = (part, date) =>
+  new Intl.DateTimeFormat("en", part).format(date);
+
+	eleventyConfig.addFilter("formatDate", async (obj) => {
+    if (!obj) {
+      return "";
+    }
+    const date = parseDate(obj);
+
+    const month = formatPart({ month: "short" }, date);
+    const day = formatPart({ day: "numeric" }, date);
+    const year = formatPart({ year: "numeric" }, date);
+    const hours = date.getUTCHours();
+    const minutes = date.getUTCMinutes();
+
+    if (hours != 0 && minutes != 0) {
+      return `${month} ${day}, ${year} - ${hours}:${minutes} UTC`;
+    }
+
+    return `${month} ${day}, ${year}`;
+  });
 
   return {
     dir: {
