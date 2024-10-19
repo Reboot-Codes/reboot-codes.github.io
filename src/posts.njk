@@ -3,15 +3,19 @@ title: Posts
 isBlog: true
 pagination:
   data: collections.allPosts
-  size: 1
+  size: 10
 ---
 
 <h1>The DIY Bog</h1>
 
+<p>
+  Tumblr is full of some cool people, but project posts get lost in the noise. Everywhere else is designed for 250 chars or less, and get even MORE lost. And we're not running this on google's servers. So, meet our blog!
+</p>
+
 <h2>Tags</h2>
 
 {% if ((collections.all | getAllTags | filterTagList) | length) > 0 %}
-<p>Find posts of a specific subect.</p>
+<p>Find posts on a specific subject. (Relies on us... remebering to tag things, you can make a PR about it if you really need something updated.)</p>
 
 <ul>
   {% for tag in collections.all | getAllTags | filterTagList %}

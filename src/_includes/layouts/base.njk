@@ -10,6 +10,12 @@ useContainer: true
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% include "copywriting/title.njk" %}</title>
     <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="icon" href="/favicon.png" />
+    <a rel="me" href="https://mastodon.social/@reboothasmastodon"></a>
+    <a rel="me" href="https://tiggi.es/@reboot"></a>
+    {% if (opengraph) %}
+    <!-- TODO: Implement opengraph for all pages. -->
+    {% endif %}
   </head>
   <body>
     {% include "components/navigation.njk" %}

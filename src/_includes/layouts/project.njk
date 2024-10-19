@@ -2,20 +2,39 @@
 layout: base.njk
 isProject: true
 pagination:
-  size: 2
+  size: 10
 useContainer: true
 ---
 
 <h1>{{ title }}</h1>
 
+{% if (sourceUrl or projectSite) %}
+<ul style="margin-bottom: 24px;">
+  {% if sourceUrl %}
+    <li><a href="{{ sourceUrl }}" target="_blank" rel="noopener noreferrer">Source Code</a></li>
+  {% endif %}
+  {% if projectSite %}
+    <li><a href="{{ projectSite }}" target="_blank" rel="noopener noreferrer">Project Website</a></li>
+  {% endif %}
+</ul>
+{% endif %}
+
 {{ content | safe }}
 
-<h2>Posts</h2>
 
-<ul>
+<h2 style="margin-top: 24px;">Posts</h2>
+
+<p>All blog posts that reference {{title}}, ordered oldest to newest.</p>
+
+<div id="posts-list" class="post-list">
 {%- for item in pagination.items %}
-  <li><a href="{{ item.page.url }}">{{ item.data.title }}</a></li>
+  {% if item.data.published != false %}
+    <article id="post-{{ loop.index }}" class="post">
+      <a href="{{ item.page.url }}">{{ item.data.title }}</a>
+      <p>on {{ item.page.date | formatDate }}, takes {{ item.content | timeToRead }} to read.</p>
+    </article>
+  {% endif %}
 {% endfor -%}
-</ul>
+</div>
 
 {% include "components/pagination.njk" %}

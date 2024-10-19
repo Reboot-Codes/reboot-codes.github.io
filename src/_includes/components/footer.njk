@@ -1,3 +1,23 @@
-<footer>
-  test
+<footer id="footer" class="footer">
+  <div class="footer-segs">
+    <div id="footer-seg-1" class="footer-seg">
+      <h2>Hallo, Welt!</h2>
+      <p>
+        That's "Hello, World!" in German.
+      </p>
+    </div>
+    <div class="footer-seg">
+      <p>
+        I think it's interesting to know what powers a site, check the Source link below for the repository!
+      </p>
+      <div class="footer-links">
+        {% for footerLink in footerLinks %}
+        <a class="footer-link" target="_blank" rel="noopener noreferrer" id="footer-link-item-{{ loop.index }}" href="{{ footerLink.href }}">
+          {{ footerLink.title }}
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <p class="copyright">&copy; 2022-2024 Reboot/Fitz.</p>
 </footer>

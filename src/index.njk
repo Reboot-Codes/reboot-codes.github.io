@@ -1,5 +1,62 @@
 ---
-title: home
+title: Home
+pagination:
+  data: collections.featuredProject
+  # Until I find a way to get pagination to work better, we're just gonna do this, kay?
+  size: 9999999999999999999999999999999999999999999999999999999
 ---
 
-<h1>Hallo welt!</h1>
+<div class="hero-section">
+  <div class="home-section-heading">
+    <h1>
+      Making amazing things with<br/>
+      computers since 2019.
+    </h1>
+    <p>Breaking things too x3</p>
+  </div>
+  <div class="home-section-card-content">
+    {%- for item in pagination.items %}
+      <a href="{{ item.page.url }}">
+        <h3>{{ item.data.title }}</h3>
+        <p>{{ item.data.description }}</p>
+      </a>
+    {% endfor -%}
+  </div>
+</div>
+<div class="home-section">
+  <div class="home-section-heading">
+    <h2>Tools of the Trade</h2>
+    <p>
+      Here is a comprehensive list of technologies we've used in projects.
+    </p>
+  </div>
+  <div class="home-section-card-content">
+    {% for technology in generalData.self.experience.technologies %}
+      <a class="home-section-card" rel="noopener noreferrer" target="_blank" href="{{ technology.url }}">
+        <h3 class="home-section-card-title">{{ technology.title }}</h3>
+        <p>{{ technology.description }}</p>
+      </a>
+    {% endfor %}
+  </div>
+</div>
+<div class="home-section">
+  <div class="home-section-heading">
+    <h2>About</h2>
+    <p>
+      If you don't care about back story or are bored by big walls of words, you can skip this section.
+    </p>
+  </div>
+  <div class="home-section-text-content">
+    <p>
+      Since we got our first computer when we were 12, we always wondered about how computers worked. This lead us down the rabbit hole of writing code. Our first real project was a Discord.js bot that was cobbled together from many different tutorials and it had a lot of bugs. It did however, teach us a lot about writing JavaScript and using Node.js.
+    </p>
+
+    <p>
+      Then we wondered about creating a web dashboard, like a lot of other Discord bots. This got us into using React, and later using MongoDB. This started our web development career. Although that project is long gone into the depths of the digial void, it was the starting point for us. And we hope to share what we've learned using this website.
+    </p>
+
+    <p>
+      We're always still learning, and we hope to learn more. - Reboot/Fitz 🎉
+    </p>
+  <div>
+</div>

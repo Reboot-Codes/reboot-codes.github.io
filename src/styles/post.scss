@@ -3,3 +3,43 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+.og-image {
+  margin: 12px auto;
+}
+
+#post-content {
+  h1, h2, h3, h4, h5, h6 {
+    a {
+      text-decoration: none;
+    }
+    margin-top: 24px;
+  }
+
+  p {
+    margin-top: 12px;
+  }
+
+  pre {
+    margin-top: 12px;
+  }
+
+  blockquote {
+    border-left: 1px solid var(--hover);
+    padding-left: 12px;
+  }
+
+  hr {
+    margin: 12px;
+    max-width: calc(100% - 24px);
+    width: 100%;
+    height: 1px;
+    background-color: var(--hover);
+    border: none;
+  }
+
+  ol, ul {
+    margin-top: 12px;
+    padding-left: 24px;
+  }
+}

@@ -1,22 +1,66 @@
 @import url("/styles/reset.css");
 @import url("/styles/colors.css");
-
 @import url("/styles/post.css");
+@import url("/styles/home.css");
 
 :root {
   --bg: var(--black);
   --color: var(--white);
   --contrast: var(--gray-700);
+  --hover: var(--green-300);
 }
 
-@media (prefers-color-scheme: light) {
+@import url("/styles/prism-dark.css");
+
+@media (max-width: 600px) {
   :root {
-    --bg: var(--white);
-    --color: var(--black);
-    --contrast: var(--gray-50);
+    font-size: 1.15em;
   }
 
-  // @include light-prism;
+  .nav-bar {
+    flex-direction: column !important;
+    height: fit-content !important;
+    align-items: normal !important;
+
+    .nav-items {
+      flex-direction: column !important;
+      align-items: normal !important;
+
+      .nav-item {
+        font-size: 1.15em;
+      }
+    }
+  }
+
+  .footer-segs {
+    flex-direction: column !important;
+    
+    #footer-seg-1 {
+      margin-bottom: 12px;
+    }
+
+    .footer-seg {
+      width: 100% !important;
+
+      .footer-link {
+        font-size: 1.15em;
+      }
+    }
+  }
+}
+
+.link-external:after {
+  content: "";
+  width: 11px;
+  height: 11px;
+  margin: 0px 4px;
+  // source: https://icons.getbootstrap.com/icons/box-arrow-up-right/
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22white%22%20class%3D%22bi%20bi-box-arrow-up-right%22%20viewBox%3D%220%200%2016%2016%22%3E%0A%20%20%3Cpath%20fill-rule%3D%22evenodd%22%20d%3D%22M8.636%203.5a.5.5%200%200%200-.5-.5H1.5A1.5%201.5%200%200%200%200%204.5v10A1.5%201.5%200%200%200%201.5%2016h10a1.5%201.5%200%200%200%201.5-1.5V7.864a.5.5%200%200%200-1%200V14.5a.5.5%200%200%201-.5.5h-10a.5.5%200%200%201-.5-.5v-10a.5.5%200%200%201%20.5-.5h6.636a.5.5%200%200%200%20.5-.5%22%2F%3E%0A%20%20%3Cpath%20fill-rule%3D%22evenodd%22%20d%3D%22M16%20.5a.5.5%200%200%200-.5-.5h-5a.5.5%200%200%200%200%201h3.793L6.146%209.146a.5.5%200%201%200%20.708.708L15%201.707V5.5a.5.5%200%200%200%201%200z%22%2F%3E%0A%3C%2Fsvg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  fill: var(--hover);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -52,7 +96,7 @@ a:visited {
 }  
 
 a:hover {
-  color: var(--green-300);
+  color: var(--hover);
 }
 
 .nav-bar {
@@ -71,8 +115,15 @@ a:hover {
     font-size: larger;
   }
 
-  .nav-item {
-    margin: 6px;
+  .nav-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    .nav-item {
+      margin: 6px;
+    }
   }
 }
 
@@ -95,7 +146,7 @@ a:hover {
     margin: 6px;
     padding: 6px 12px;
     border-radius: 12px;
-    background-color: var(--green-300);
+    background-color: var(--green-500);
 
     a {
       text-decoration: none;
@@ -108,5 +159,43 @@ a:hover {
 
   .pagination-control[aria-current] {
     background-color: var(--contrast);
+  }
+}
+
+.post-list {
+  .post {
+    margin-top: 12px;
+  }
+}
+
+.tagged-posts {
+  .tagged-post {
+    margin-top: 12px;
+  }
+}
+
+.footer {
+  width: 100%;
+  margin: 24px auto 12px auto;
+  padding: 24px 24px 0 24px;
+  border-top: 1px solid var(--hover);
+
+  .footer-segs {
+    display: flex;
+    flex-direction: row;
+
+    .footer-seg {
+      width: 50%;
+
+      .footer-link {
+        margin-right: 12px;
+      }
+    }
+  }
+
+  .copyright {
+    margin: 24px auto 0 auto;
+    height: fit-content;
+    width: fit-content;
   }
 }

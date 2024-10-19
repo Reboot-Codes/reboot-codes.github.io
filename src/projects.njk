@@ -3,15 +3,21 @@ title: Projects
 isProject: true
 pagination:
   data: collections.allProjects
-  size: 2
+  size: 10
 ---
 
 <h1>{{ title }}</h1>
 
-<ul>
+<p>All the stuff we've made!</p>
+
+<div id="posts-list" class="post-list">
 {%- for item in pagination.items %}
-  <li><a href="{{ item.page.url }}">{{ item.data.title }}</a></li>
+  <article id="post-{{ loop.index }}" class="post">
+    <a href="{{ item.page.url }}">{{ item.data.title }}</a>
+    <p>{{ item.data.description }}</p>
+  </article>
 {% endfor -%}
-</ul>
+</div>
+
 
 {% include "components/pagination.njk" %}

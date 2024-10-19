@@ -2,4 +2,19 @@
 title: Contact
 ---
 
-<h1>Contact</h1>
+<div class="hero-section">
+  <div class="home-section-heading">
+    <h1>Contact Us</h1>
+    <p>
+      Hey, looks like you want to get in touch! Well, you've come to the right place. Click on your favorite method and let the fancy links take you to where you want to go.
+    </p>
+  </div>
+  <div class="home-section-card-content">
+    {% for method in generalData.self.contactMethods %}
+      <a class="home-section-card" rel="noopener noreferrer" target="_blank" href="{{ method.url }}">
+        <h3 class="home-section-card-title">{{ method.title }}</h3>
+        <p>{{ method.description }}</p>
+      </a>
+    {% endfor %}
+  </div>
+</div>

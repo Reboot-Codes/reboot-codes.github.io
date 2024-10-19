@@ -3,12 +3,25 @@ const { feedPlugin } = require("@11ty/eleventy-plugin-rss");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const timeToRead = require('eleventy-plugin-time-to-read');
+const markdownItExternalAnchor = require('markdown-it-external-anchor');
+const prism = require('markdown-it-prism');
 
 module.exports = function (eleventyConfig) {
 	const md = markdownIt({ "html": true }).use(markdownItAnchor, { 
 		"level": 2,
 		permalink: markdownItAnchor.permalink.headerLink()
+	}).use(markdownItExternalAnchor, {
+		class: "link-external"
+	}).use(prism, {
+		highlightInlineCode: true,
+		plugins: [
+			"copy-to-clipboard",
+			"show-language",
+			"inline-color",
+			"toolbar"
+		]
 	});
+
   eleventyConfig.setLibrary("md", md);
 
   eleventyConfig.addTemplateFormats("scss");
@@ -34,7 +47,9 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addCollection(
 		"allPosts",
 		function (collectionApi) {
-			return collectionApi.getFilteredByTags("post").sort((a, b) => (b.date - a.date));
+			return collectionApi.getFilteredByTags("post").sort((a, b) => (b.date - a.date)).filter((a) => {
+				return a.data.published != false;
+			});
 		}
 	);
 
@@ -82,7 +97,7 @@ module.exports = function (eleventyConfig) {
 	});
 
 	eleventyConfig.addFilter("filterTagList", function filterTagList(tags) {
-		return (tags || []).filter(tag => ["all", "post", "allPosts", "project", "allProjects"].indexOf(tag) === -1).filter((tag) => (!(tag.startsWith("project:"))));
+		return (tags || []).filter(tag => ["all", "post", "allPosts", "project", "allProjects", "featuredProject"].indexOf(tag) === -1).filter((tag) => (!(tag.startsWith("project:"))));
 	});
 
 	const parseDate = (str) => {
@@ -113,6 +128,8 @@ module.exports = function (eleventyConfig) {
 
     return `${month} ${day}, ${year}`;
   });
+
+	eleventyConfig.addPassthroughCopy({"src/public": "/"});
 
   return {
     dir: {

@@ -1,6 +1,8 @@
 <nav id="navbar" class="nav-bar">
   <a id="section-title" class="nav-title" href="/">{% include "copywriting/sectionTitle.njk" %}</a>
-  {% for navLink in nav %}
-    <a id="nav-item-{{ loop.index }}" class="nav-item" href="{{ navLink.href }}">{{ navLink.title }}</a>
-  {% endfor %}
+  <div id="navitems" class="nav-items">
+    {% for navLink in nav %}
+      <a id="nav-item-{{ loop.index }}" class="nav-item" href="{{ navLink.href }}">{{ navLink.title }}</a>
+    {% endfor %}
+  </div>
 </nav>

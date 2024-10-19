@@ -20,11 +20,10 @@
           "they/them/theirs"
         ],
         "discouragedPronouns": [
-          "he/him/his"
-        ],
-        "unacceptablePronouns": [
+          "he/him/his",
           "she/her/hers"
-        ]
+        ],
+        "unacceptablePronouns": []
       },
       "gh0st": {
         "name": "Hunter",
@@ -49,6 +48,87 @@
         "discouragedPronouns": [],
         "unacceptablePronouns": []
       }
+    },
+    "contactMethods": [
+      {
+        "title": "Using Email",
+        "description": "A tried and true (to the golden age of self-hosted websites) method of communication.",
+        "url": "mailto:hello@reboot-codes.com"
+      },
+      {
+        "title": "Using Matrix",
+        "description": "A new way of instant messaging, quite similar to email actually.",
+        "url": "https://matrix.to/#/@reboot-hasmatrix:matrix.org"
+      },
+      {
+        "title": "Using GitHub",
+        "description": "Not really a way to contact me, but you might just want to checkout the source for something.",
+        "url": "https://github.com/Reboot-Codes"
+      }
+    ],
+    "experience": {
+      "technologies": [
+        {
+          "title": "Node.js",
+          "description": "The first solution to use JavaScript server-side. It powers this site; and many others like Apple, Twitter, and more.",
+          "url": "https://nodejs.org/en/"
+        },
+        {
+          "title": "TypeScript",
+          "description": "My favorite language to write code in. It's type safe and can be compiled into JavaScript to be used anywhere.",
+          "url": "https://www.typescriptlang.org/"
+        },
+        {
+          "title": "React",
+          "description": "React is a frontend JavaScript library that allows for very flexible and extendable web apps. It runs this site with it's reusable components and advanced features.",
+          "url": "https://reactjs.org/"
+        },
+        {
+          "title": "Next.js",
+          "description": "A framework to use React for high traffic, production web applications. It powers this site with it's use of server side rendering.",
+          "url": "https://nextjs.org/"
+        },
+        {
+          "title": "PostgreSQL",
+          "description": "A very popular and powerful relational database, that's been tried and tested since 1996.",
+          "url": "https://www.postgresql.org/"
+        },
+        {
+          "title": "MongoDB",
+          "description": "A document-based, no-SQL database for modern applications.",
+          "url": "https://www.mongodb.com/"
+        },
+        {
+          "title": "Deno",
+          "description": "A next generation JavaScript and TypeScript interpreter like Node.js, but written in rust using the V8 engine. It aims to be fully compatible with browsers and Node.",
+          "url": "https://deno.land/"
+        },
+        {
+          "title": "Web Sockets",
+          "description": "A web standard that allows for instantaneous delivery of data to and from clients and servers.",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebSocket"
+        },
+        {
+          "title": "Redis",
+          "description": "A fast, extendable, in memory, database. Mainly used as a cache; but can be used as a primary database.",
+          "url": "https://redis.io/"
+        },
+        {
+          "title": "Raspberry Pi",
+          "description": "A credit card sized, ARM based computer for low power, mobile computing.",
+          "url": "https://www.raspberrypi.com/"
+        },
+        {
+          "title": "Python",
+          "description": "Really fast and powerful interpreted programming/scripting language",
+          "url": "https://www.python.org/"
+        },
+        {
+          "title": "Rust",
+          "description": "Memory-safe, low-level programming language with FFI support and a great compiler and community.",
+          "url": "https://www.rust-lang.org/"
+        }
+      ]
     }
   }
 }
