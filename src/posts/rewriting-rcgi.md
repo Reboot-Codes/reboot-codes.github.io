@@ -1,7 +1,10 @@
 ---
 title: Re-writing RCGI
+description: "Moving to 11ty because this doesn't actually need next.js... surprisingly."
+date: '2024-10-18T00:00:00-07:00'
 tags: 
  - project:rcgi
+ - software development
 ---
 
 I mean like, have you [seen that source-code](https://github.com/Reboot-Codes/old-rcgi)? Anyways, thank you to the ever helpful [Bugfish](https://github.com/vguttmann) for help with that. But what runs reboot-codes.com now? [This does!](https://github.com/Reboot-Codes/reboot-codes.github.io)

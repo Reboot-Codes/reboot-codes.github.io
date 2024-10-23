@@ -128,6 +128,16 @@
           "title": "Rust",
           "description": "Memory-safe, low-level programming language with FFI support and a great compiler and community.",
           "url": "https://www.rust-lang.org/"
+        },
+        {
+          "title": "Tokio",
+          "description": "Asynchronous processing library for rust that implements modern paradigms and conventions.",
+          "url": "https://tokio.rs"
+        },
+        {
+          "title": "Warp",
+          "description": "Advanced http(s) server library for rust, built on tokio.",
+          "url": "https://github.com/seanmonstar/warp"
         }
       ]
     }
