@@ -6,7 +6,7 @@
 :root {
   --bg: var(--black);
   --color: var(--white);
-  --contrast: var(--gray-700);
+  --contrast: var(--gray-800);
   --hover: var(--green-300);
 }
 
@@ -101,7 +101,7 @@ a:hover {
 
 .nav-bar {
   width: 100%;
-  height: 32px;
+  min-height: 64px;
   display: flex;
   flex-direction: row;
   padding: 12px;
@@ -143,21 +143,27 @@ a:hover {
   align-items: center;
 
   .pagination-control {
-    margin: 6px;
-    padding: 6px 12px;
-    border-radius: 12px;
-    background-color: var(--green-500);
-
     a {
+      margin: 6px;
+      padding: 6px 12px;
+      display: block;
+      border: 1px solid var(--hover);
+
       text-decoration: none;
     }
 
     a:hover {
-      color: var(--color);
+      color: var(--bg);
+      background-color: var(--hover);
     }
   }
 
   .pagination-control[aria-current] {
+    margin: 6px;
+    padding: 6px 12px;
+    display: block;
+
+    border: 1px solid var(--contrast);
     background-color: var(--contrast);
   }
 }
@@ -165,12 +171,34 @@ a:hover {
 .post-list {
   .post {
     margin-top: 12px;
+    margin: 6px;
+    padding: 6px 12px;
+    display: block;
+    border: 1px solid var(--hover);
+
+    text-decoration: none;
+  }
+
+  .post:hover {
+    color: var(--bg);
+    background-color: var(--hover);
   }
 }
 
 .tagged-posts {
   .tagged-post {
     margin-top: 12px;
+    margin: 6px;
+    padding: 6px 12px;
+    display: block;
+    border: 1px solid var(--hover);
+
+    text-decoration: none;
+  }
+
+  .tagged-post:hover {
+    color: var(--bg);
+    background-color: var(--hover);
   }
 }
 

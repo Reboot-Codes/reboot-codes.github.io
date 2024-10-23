@@ -8,10 +8,6 @@ useContainer: true
 
 <p>on {{ page.date | formatDate }}, takes {{ content | timeToRead }} to read.</p>
 
-{% if (openGraph.imgUrl) %}
-<img id="ogimage" class="og-image" src="{{ openGraph.imgUrl }}">
-{% endif %}
-
 <h2>Tags</h2>
 {% if ((tags | length) > 1) %}
 <ul>
@@ -27,6 +23,10 @@ useContainer: true
 </ul>
 {% else %}
 <p>No tags</p>
+{% endif %}
+
+{% if (openGraph.imgUrl) %}
+<img id="ogimage" class="og-image" src="{{ openGraph.imgUrl }}">
 {% endif %}
 
 <div id="post-content" class="content">

@@ -35,6 +35,19 @@
   }
 }
 
+.home-section-card {
+  padding: 6px 12px;
+  display: block;
+  border: 1px solid var(--hover);
+
+  text-decoration: none;
+}
+
+.home-section-card:hover {
+  color: var(--bg);
+  background-color: var(--hover);
+}
+
 .home-section {
   margin-top: 32px;
   display: flex;
