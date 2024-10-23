@@ -31,7 +31,7 @@ pagination:
 <div id="posts-list" class="post-list">
 {%- for item in pagination.items %}
   <a id="post-{{ loop.index }}" href="{{ item.page.url }}" class="post transition">
-    <p>{{ item.data.title }}</p>
+    <p class="post-title">{{ item.data.title }}</p>
     <p>on {{ item.page.date | formatDate }}, takes {{ item.content | timeToRead }} to read.</p>
   </a>
 {% endfor -%}

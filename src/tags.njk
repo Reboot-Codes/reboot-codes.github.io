@@ -20,7 +20,7 @@ isBlog: true
 <div id="taggedposts" class="tagged-posts">
 {% for post in (collections[ tag ] | reverse) %}
   <a class="tagged-post transition" href="{{ post.url }}">
-    <p>{{ post.data.title }}</p>
+    <p class="post-title">{{ post.data.title }}</p>
     <p>on {{ post.page.date | formatDate }}</p>
   </a>
 {% endfor %}

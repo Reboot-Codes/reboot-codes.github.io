@@ -17,7 +17,7 @@ pagination:
   <div class="home-section-card-content">
     {%- for item in pagination.items %}
       <a href="{{ item.page.url }}" class="home-section-card">
-        <h3>{{ item.data.title }}</h3>
+        <h3 class="home-section-card-title">{{ item.data.title }}</h3>
         <p>{{ item.data.description }}</p>
       </a>
     {% endfor -%}

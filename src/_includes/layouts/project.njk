@@ -30,7 +30,7 @@ useContainer: true
 {%- for item in pagination.items %}
   {% if item.data.published != false %}
     <a id="post-{{ loop.index }}" class="post transition" href="{{ item.page.url }}">
-      <p>{{ item.data.title }}</p>
+      <p class="post-title">{{ item.data.title }}</p>
       <p>on {{ item.page.date | formatDate }}, takes {{ item.content | timeToRead }} to read.</p>
     </a>
   {% endif %}

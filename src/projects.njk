@@ -13,7 +13,7 @@ pagination:
 <div id="posts-list" class="post-list">
 {%- for item in pagination.items %}
   <a id="post-{{ loop.index }}" class="post transition" href="{{ item.page.url }}">
-    <p>{{ item.data.title }}</p>
+    <p class="post-title">{{ item.data.title }}</p>
     <p>{{ item.data.description }}</p>
   </a>
 {% endfor -%}
