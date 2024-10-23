@@ -6,18 +6,28 @@ useContainer: true
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>{% include "copywriting/title.njk" %}</title>
+
+    <!-- Base shit to get the site working properly. -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{% include "copywriting/title.njk" %}</title>
+
+    <!-- Styles and branding -->
     <link rel="stylesheet" href="/styles/global.css" />
     <link rel="icon" href="/favicon.png" />
-    <!-- TODO: Implement opengraph for all pages. -->
+
+    <!-- OpenGraph meta tags. -->
     <meta property="og:title" content="{% if title %}{{ title }}{% else %}{% include "copywriting/sectionTitle.njk" %}{% endif %}" />
     <meta property="og:description" content="{% if description %}{{ description }}{% else %}{% if title %}{% include "copywriting/sectionTitle.njk" %}{% endif %}{% endif %}" />
     <meta property="og:site_name" content="{% include "copywriting/sectionTitle.njk" %}" />
     {% if openGraph.imgUrl %}<meta id="og:image" content="{{ openGraph.imgUrl }}" />{% endif %}
+
+    <!-- Mastodon link verification -->
     <a rel="me" href="https://mastodon.social/@reboothasmastodon" style="color: rgba(0, 0, 0, 0); position: absolute;" aria-hidden="true"></a>
     <a rel="me" href="https://tiggi.es/@reboot" style="color: rgba(0, 0, 0, 0); position: absolute;" aria-hidden="true"></a>
+
+    <!-- Adds discord embed color! -->
+    <meta name="theme-color" content="#7ccf9e">
   </head>
   <body>
     {% include "components/navigation.njk" %}
