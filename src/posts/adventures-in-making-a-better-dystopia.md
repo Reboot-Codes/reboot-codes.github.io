@@ -21,7 +21,7 @@ In such, we thought it'd be nice to have a set of fursuit parts that change alon
 
 ## No such thing as a "minimum viable product."
 
-Sorry, but uh, yeah, no, there is no such thing as perfection. Creating what amounts to a "cybernetics API" as one of our partners put it, is hard. And we're not gonna create it perfectly on the first try. It took us about a month or so to make just the event bus, let alone create what amounts to [AOSP](https://source.android.com/) as a collection of dogs in a single skin-suit. Plus, we wanna make sure that it's secure since it could be used against the user. Which, of course, is a big no-no in the world of both [cybersecurity](/tags/hacking) and [engineering](/tags/engineering), specifically in engineering ethics, which we're being told is actually pretty important.
+Sorry, but uh, yeah, no, there is no such thing as perfection. Creating what amounts to a "prosthetics API" as one of our partners put it, is hard. And we're not gonna create it perfectly on the first try. It took us about a month or so to make just the event bus, let alone create what amounts to [AOSP](https://source.android.com/) as a collection of dogs in a single skin-suit. Plus, we wanna make sure that it's secure since it could be used against the user. Which, of course, is a big no-no in the world of both [cybersecurity](/tags/hacking) and [engineering](/tags/engineering), specifically in engineering ethics, which we're being told is actually pretty important.
 
 So, in the end, Clover will continue to be developed as we see fit, and as we have time. We wanna get this done pretty soon in the grand scheme of things, but it's kinda hard to make such a complex project in a fast amount of time.
 
