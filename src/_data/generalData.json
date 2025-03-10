@@ -18,13 +18,15 @@
         "username": "dead_d0g",
         "preferredPronouns": [
           "it/its",
-          "they/them/theirs"
+          "Pup"
         ],
         "discouragedPronouns": [
           "he/him/his",
-          "she/her/hers"
+          "they/them/theirs"
         ],
-        "unacceptablePronouns": []
+        "unacceptablePronouns": [
+          "she/her/hers"
+        ]
       },
       "gh0st": {
         "name": "Hunter",
@@ -39,9 +41,9 @@
           "she/her/hers"
         ]
       },
-      "system": {
-        "name": "System",
-        "username": "system",
+      "fido": {
+        "name": "Fido",
+        "username": "fido",
         "preferredPronouns": [
           "it/its",
           "they/them/theirs"
@@ -71,33 +73,28 @@
       "technologies": [
         {
           "title": "Node.js",
-          "description": "The first solution to use JavaScript server-side. It powers this site; and many others like Apple, Twitter, and more.",
+          "description": "The first solution to use JavaScript server-side. It powers many production websites like Apple, Twitter, and more.",
           "url": "https://nodejs.org/en/"
         },
         {
           "title": "TypeScript",
-          "description": "My favorite language to write code in. It's type safe and can be compiled into JavaScript to be used anywhere.",
+          "description": "Type safe and can be compiled into JavaScript to be used anywhere.",
           "url": "https://www.typescriptlang.org/"
         },
         {
           "title": "React",
-          "description": "React is a frontend JavaScript library that allows for very flexible and extendable web apps. It runs this site with it's reusable components and advanced features.",
+          "description": "React is a frontend JavaScript library that allows for very flexible and extendable web apps.",
           "url": "https://reactjs.org/"
         },
         {
           "title": "Next.js",
-          "description": "A framework to use React for high traffic, production web applications. It powers this site with it's use of server side rendering.",
+          "description": "A framework to use React for high traffic, production web applications.",
           "url": "https://nextjs.org/"
         },
         {
-          "title": "PostgreSQL",
-          "description": "A very popular and powerful relational database, that's been tried and tested since 1996.",
-          "url": "https://www.postgresql.org/"
-        },
-        {
-          "title": "MongoDB",
-          "description": "A document-based, no-SQL database for modern applications.",
-          "url": "https://www.mongodb.com/"
+          "title": "11ty",
+          "description": "Simple static site generator. Runs this site, and many others. ;3",
+          "url": "https://www.11ty.dev"
         },
         {
           "title": "Deno",
@@ -105,19 +102,9 @@
           "url": "https://deno.land/"
         },
         {
-          "title": "Web Sockets",
-          "description": "A web standard that allows for instantaneous delivery of data to and from clients and servers.",
-          "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebSocket"
-        },
-        {
           "title": "Redis",
           "description": "A fast, extendable, in memory, database. Mainly used as a cache; but can be used as a primary database.",
           "url": "https://redis.io/"
-        },
-        {
-          "title": "Raspberry Pi",
-          "description": "A credit card sized, ARM based computer for low power, mobile computing.",
-          "url": "https://www.raspberrypi.com/"
         },
         {
           "title": "Python",
@@ -138,6 +125,21 @@
           "title": "Warp",
           "description": "Advanced http(s) server library for rust, built on tokio.",
           "url": "https://github.com/seanmonstar/warp"
+        },
+        {
+          "title": "Linux",
+          "description": "Open source operating system that we use full time on all our bare metal machines (specifially: NixOS).",
+          "url": "https://github.com/Reboot-Codes/dotfiles"
+        },
+        {
+          "title": "Ghidra",
+          "description": "Open source reverse engineering framework, primarily maintained by the NSA.",
+          "url": "https://ghidra-sre.org"
+        },
+        {
+          "title": "Docker",
+          "description": "Containerized application build, distribution, and run system.",
+          "url": "https://docker.com"
         }
       ]
     }

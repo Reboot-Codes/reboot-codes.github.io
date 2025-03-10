@@ -1,6 +1,4 @@
 <footer id="footer" class="footer">
-  <!-- TODO: Add blinkies!!!! -->
-
   <div class="footer-segs">
     <div id="footer-seg-1" class="footer-seg">
       <h2>Hallo, Welt!</h2>
@@ -14,12 +12,14 @@
       </p>
       <div class="footer-links">
         {% for footerLink in footerLinks %}
-        <a class="footer-link" target="_blank" rel="noopener noreferrer" id="footer-link-item-{{ loop.index }}" href="{{ footerLink.href }}">
+        {% set firstCharOfHref = (footerLink.href | first) %}
+        <a class="footer-link" {% if firstCharOfHref != "/" %} target="_blank" {% endif %} rel="noopener noreferrer" id="footer-link-item-{{ loop.index }}" href="{{ footerLink.href }}">
           {{ footerLink.title }}
         </a>
         {% endfor %}
       </div>
     </div>
   </div>
+  <!-- TODO: Add blinkies!!!! -->
   <p class="copyright">&copy; 2022-2024 Reboot/Fitz.</p>
 </footer>

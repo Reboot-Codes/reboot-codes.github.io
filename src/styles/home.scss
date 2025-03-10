@@ -20,7 +20,11 @@
   }
 }
 
-.home-section-text-content, .home-section-card-content {
+.home-section-card-content-1-col {
+  grid-template-columns: 1fr;
+}
+
+.home-section-text-content, .home-section-card-content, .home-section-card-content-1-col {
   width: 100%;  
   margin: 0 12px;
   display: grid;
