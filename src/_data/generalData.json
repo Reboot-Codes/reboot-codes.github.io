@@ -64,6 +64,11 @@
         "url": "https://matrix.to/#/@reboot-hasmatrix:matrix.org"
       },
       {
+        "title": "Using Signal",
+        "description": "Because spooks are bad, and also sometimes matrix.org goes down.",
+        "url": "https://signal.me/#eu/gKSniclw2ZBlgE0N7b1vjtrFz3GqfB-JHhrEez75qNPtW-CUPpROHo_pjQ1vy21X"
+      },
+      {
         "title": "Using GitHub",
         "description": "Not really a way to contact me, but you might just want to checkout the source for something.",
         "url": "https://github.com/Reboot-Codes"
