@@ -1,0 +1,268 @@
+{
+  "buttons": [
+    {
+      "src": "i-support-right-to-repair.gif",
+      "alt": "I Support Right to Repair",
+      "href": "https://ifixit.com"
+    },
+    {
+      "src": "internet-archive.jpg",
+      "alt": "Internet Archive",
+      "href": "https://archive.org"
+    },
+    {
+      "src": "this-site-is-gay.gif",
+      "alt": "This site is gay!"
+    },
+    {
+      "src": "piracy-now.gif",
+      "alt": "Piracy Now!",
+      "href": "/s3cr3ts/piracy"
+    },
+    {
+      "src": "play-ctf-now.gif",
+      "alt": "Play CTFs now!",
+      "href": "https://ctf.reboot-codes.com"
+    },
+    {
+      "src": "email-me.gif",
+      "alt": "Email me!",
+      "href": "mailto:hello@reboot-codes.com?subject=Hey%2C%20I'm%20really%20cool&body=Hi%20Reboot%2FFitz%2C%0A%0AI'm%20really%20cool%20and%20I%20looked%20around%20the%20blinkies%20in%20the%20footer%20of%20y'all's%20site%20like%20a%20really%20awesome%20person.%20Wanna%20be%20friends%3F"
+    },
+    {
+      "src": "got-html.gif",
+      "alt": "Got HTML?",
+      "href": "https://neocities.org/tutorials"
+    },
+    {
+      "src": "old-man-yaoi-now.gif",
+      "alt": "Old man yaoi, now!",
+      "href": "https://e621.net/posts?tags=male+-female+older_male"
+    },
+    {
+      "src": "the-truth-now.gif",
+      "alt": "The truth, now!",
+      "href": "https://aliens.gov"
+    },
+    {
+      "src": "ezgif-now.gif",
+      "alt": "EZGIF, now!",
+      "href": "https://ezgif.com/"
+    },
+    {
+      "src": "pass-the-shareware-please.gif",
+      "alt": "Pass the Shareware, please.",
+      "href": "https://wiki.dbzer0.com/piracy/megathread/software/"
+    },
+    {
+      "src": "firefox-now.gif",
+      "alt": "Firefox, now!",
+      "href": "https://librewolf.net/"
+    },
+    {
+      "src": "get-a-computer.jpg",
+      "alt": "Get a computer!",
+      "href": ""
+    },
+    {
+      "src": "sharing-is-caring.gif",
+      "alt": "Sharing is caring",
+      "href": "https://www.qbittorrent.org/"
+    },
+    {
+      "src": "toe-beans-now.gif",
+      "alt": "Toe beans, now!",
+      "href": "https://e621.net/posts?tags=rating%3Asafe+pawpads"
+    },
+    {
+      "src": "anarchy-now.gif",
+      "alt": "Anarchy, now!",
+      "href": "https://annas-archive.gl/md5/73137c8dc80176b230aec62a9c778477"
+    },
+    {
+      "src": "furry-yay.png",
+      "alt": "Furry, YAY!",
+      "href": "https://furaffinity.net/"
+    },
+    {
+      "src": "made-with-my-own-two-paws.jpg",
+      "alt": "Made with my own two paws!",
+      "href": "https://codeberg.org/Reboot-Codes/rcgi"
+    },
+    {
+      "src": "digital-blasphemy.gif",
+      "alt": "Digital blasphemy",
+      "href": "https://thesatanictemple.com/"
+    }
+  ],
+  "blinkies": [
+    {
+      "src": "i-love-being-a-freak.gif",
+      "alt": "I love being a freak!"
+    },
+    {
+      "src": "always-under-construction.gif",
+      "alt": "Always under construction"
+    },
+    {
+      "src": "i-love-the-dark.gif",
+      "alt": "I love the dark!"
+    },
+    {
+      "src": "robots-are-cewl.gif",
+      "alt": "Robots are cewl."
+    },
+    {
+      "src": "gay-as-fuck.gif",
+      "alt": "Gay as fuck!"
+    },
+    {
+      "src": "polyamorous.gif",
+      "alt": "Polyamourous."
+    },
+    {
+      "src": "bark.gif",
+      "alt": "Bark!"
+    },
+    {
+      "src": "i-love-my-partners.gif",
+      "alt": "I love my partners!"
+    },
+    {
+      "src": "born-to-surf-the-net.gif",
+      "alt": "Born to surf the net."
+    },
+    {
+      "src": "are-we-alone.gif",
+      "alt": "Are we alone?",
+      "href": "https://en.wikipedia.org/wiki/Search_for_extraterrestrial_intelligence"
+    },
+    {
+      "src": "minecraft.gif",
+      "alt": "Minecraft."
+    },
+    {
+      "src": "pirate-club.gif",
+      "alt": "Pirate club."
+    },
+    {
+      "src": "clippy.gif",
+      "alt": "Clippy",
+      "href": "https://www.youtube.com/watch?v=2_Dtmpe9qaQ"
+    },
+    {
+      "src": "science.gif",
+      "alt": "Science"
+    },
+    {
+      "src": "werewolf-kisser.gif",
+      "alt": "Werewolf kisser",
+      "href": "https://e621.net/posts/5437512"
+    },
+    {
+      "src": "pondering-my-orb.gif",
+      "alt": "Pondering my orb"
+    },
+    {
+      "src": "homoerotic-subtext.gif",
+      "alt": "Homoerotic subtext"
+    },
+    {
+      "src": "get-doxxed.gif",
+      "alt": "Get doxxed",
+      "href": "https://osintframework.com/"
+    },
+    {
+      "src": "sinner.gif",
+      "alt": "Sinner"
+    },
+    {
+      "src": "piercing-obsessed.gif",
+      "alt": "Piercing obsessed"
+    },
+    {
+      "src": "doom-hotbar.gif",
+      "alt": "Doom hotbar",
+      "href": "https://youtu.be/5wAo54DHDY0"
+    },
+    {
+      "src": "slightly-sadistic.gif",
+      "alt": "Slightly sadistic"
+    },
+    {
+      "src": "science-lover.gif",
+      "alt": "Science lover"
+    },
+    {
+      "src": "irl-hacker.gif",
+      "alt": "IRL Hacker"
+    },
+    {
+      "src": "binary.gif",
+      "alt": "Binary"
+    },
+    {
+      "src": "cybercriminal.gif",
+      "alt": "Cybercriminal"
+    },
+    {
+      "src": "horrid-thing.gif",
+      "alt": "Horrid thing"
+    },
+    {
+      "src": "two-trucks-having-sex.gif",
+      "alt": "Two trucks having sex",
+      "href": "https://www.youtube.com/watch?v=WchseC9aKTU"
+    },
+    {
+      "src": "medic.gif",
+      "alt": "Medic"
+    },
+    {
+      "src": "100-addicted.gif",
+      "alt": "100% Addicted"
+    },
+    {
+      "src": "world-is-a-fuck.gif",
+      "alt": "BORN TO DIE / WORLD IS A FUCK / 鬼神 Kill Em All 1989 / I am trash man / 410,757,864,530 DEAD COPS"
+    },
+    {
+      "src": "i-support-emoticons.gif",
+      "alt": "I support emoticons"
+    },
+    {
+      "src": "gimp-user.gif",
+      "alt": "GIMP User",
+      "href": "https://www.gimp.org/"
+    },
+    {
+      "src": "wikipedia.gif",
+      "alt": "Wikipedia",
+      "href": "https://www.wikipedia.org/"
+    },
+    {
+      "src": "yo-dick-out.gif",
+      "alt": "Yo dick out"
+    },
+    {
+      "src": "deep-web-browser.gif",
+      "alt": "Deep web browser",
+      "href": "/s3cr3ts/deep-dark-web"
+    },
+    {
+      "src": "achieving-sentience.gif",
+      "alt": "Achieving sentience..."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Adrian's Blinkie Collection",
+      "href": "https://adriansblinkiecollection.neocities.org/"
+    },
+    {
+      "title": "BLiNKiE NET",
+      "img": "/cool-shit/buttons/blinkie-net.gif",
+      "href": "https://blinkie-net.neocities.org/blinkcredit"
+    }
+  ]
+}

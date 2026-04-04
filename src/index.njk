@@ -22,22 +22,7 @@ pagination:
     {% endfor -%}
   </div>
 </div>
-<div class="home-section">
-  <div class="home-section-heading">
-    <h2>Tools of the Trade</h2>
-    <p>
-      Here is a comprehensive list of stuff we've used in projects.
-    </p>
-  </div>
-  <div class="home-section-card-content">
-    {% for technology in generalData.self.experience.technologies %}
-      <a class="home-section-card" rel="noopener noreferrer" target="_blank" href="{{ technology.url }}">
-        <h3 class="home-section-card-title">{{ technology.title }}</h3>
-        <p>{{ technology.description }}</p>
-      </a>
-    {% endfor %}
-  </div>
-</div>
+
 <div class="home-section">
   <div class="home-section-heading">
     <h2>About</h2>
@@ -61,5 +46,40 @@ pagination:
     <p>
       - Reboot/Fitz 🎉
     </p>
-  <div>
+  </div>
+</div>
+
+<div class="home-section">
+  <div class="home-section-heading">
+    <h2>Might've Seen Us At</h2>
+    <p>
+      Events we've been to that you might recognize us from!
+    </p>
+  </div>
+  <div class="home-section-card-content">
+    {% for conference in generalData.self.experience.cons.hackingCons %}
+      <a class="home-section-card" rel="noopener noreferrer" target="_blank" href="{{ conference.url }}">
+        <h3 class="home-section-card-title">{{ conference.name }}</h3>
+        <h4 class="home-section-card-subtitle">{{ conference.date }} | {{ conference.location }} | {{ conference.award }}</h4>
+        <p>{{ conference.description }}</p>
+      </a>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="home-section">
+  <div class="home-section-heading">
+    <h2>Tools of the Trade</h2>
+    <p>
+      Here is a comprehensive list of stuff we've used in projects.
+    </p>
+  </div>
+  <div class="home-section-card-content">
+    {% for technology in generalData.self.experience.technologies %}
+      <a class="home-section-card" rel="noopener noreferrer" target="_blank" href="{{ technology.url }}">
+        <h3 class="home-section-card-title">{{ technology.title }}</h3>
+        <p>{{ technology.description }}</p>
+      </a>
+    {% endfor %}
+  </div>
 </div>

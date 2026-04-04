@@ -69,8 +69,18 @@
         "url": "https://signal.me/#eu/gKSniclw2ZBlgE0N7b1vjtrFz3GqfB-JHhrEez75qNPtW-CUPpROHo_pjQ1vy21X"
       },
       {
+        "title": "Using Atmosphere",
+        "description": "I love ATProto, and here's our microblog where we are horny as all hell.",
+        "url": "https://bsky.app/profile/reboot.reboot-codes.com"
+      },
+      {
+        "title": "Using Codeberg",
+        "description": "A better (read: freer) git hosting service in the mean time we host Forgejo ourselves.",
+        "url": "https://codeberg.org/Reboot-Codes"
+      },
+      {
         "title": "Using GitHub",
-        "description": "Not really a way to contact me, but you might just want to checkout the source for something.",
+        "description": "Microslop's git hosting service which has old projects.",
         "url": "https://github.com/Reboot-Codes"
       }
     ],
@@ -146,7 +156,35 @@
           "description": "Containerized application build, distribution, and run system.",
           "url": "https://docker.com"
         }
-      ]
+      ],
+      "cons": {
+        "hackingCons": [
+          {
+            "name": "CactusCon 12",
+            "url": "https://threatsims.com/user/certificates/a21e77ab-6740-4bf4-8b46-4435cfc6ba81",
+            "date": "2024",
+            "location": "Mesa, AZ",
+            "award": "10th Place",
+            "description": "The biggest cybersecurity convention in Arizona! Got 10th place with our team."
+          },
+          {
+            "name": "CactusCon 13",
+            "url": "https://threatsims.com/user/certificates/eeaeb6bf-1b43-47b8-9db0-75e349f2145c",
+            "date": "2025",
+            "location": "Mesa, AZ",
+            "award": "6th Place",
+            "description": "There for the 2nd time, really got in tune wth our team"
+          },
+          {
+            "name": "CactusCon 14",
+            "url": "https://threatsims.com/user/certificates/a1da1147-84a8-4b38-9f50-82d3755d25e6",
+            "date": "2026",
+            "location": "Mesa, AZ",
+            "award": "7th Place",
+            "description": "Branched out into new areas of both hacking and networking!"
+          }
+        ]
+      }
     }
   }
 }

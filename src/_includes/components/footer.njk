@@ -20,6 +20,42 @@
       </div>
     </div>
   </div>
-  <!-- TODO: Add blinkies!!!! -->
-  <p class="copyright">&copy; 2022-2024 Reboot/Fitz.</p>
+  <div class="footer-cool-shit">
+    <img src="/cool-shit/dividers/green-arrow-divider.gif" alt="An animated green arrow divider" style="margin-bottom: 6px;" />
+
+    <div class="footer-buttons">
+      {% for button in coolShit.buttons %}
+      {% if button.href %}<a href="{{ button.href }}" rel="noopener noreferrer" target="_blank">{% endif %}
+        <img src="/cool-shit/buttons/{{ button.src }}" alt="{{ button.alt }}" />
+      {% if button.href %}</a>{% endif %}
+      {% endfor %}
+      {% if buildData.isNeocities %}
+        <a href="https://neocities.org/" rel="noopener noreferrer" target="_blank">
+          <img src="/cool-shit/buttons/hosted-on-neocities.gif" alt="Hosted on Neocities!" />
+        </a>
+      {% endif %}
+    </div>
+
+    <div class="footer-blinkies">
+      {% for blinkie in coolShit.blinkies %}
+      {% if blinkie.href %}<a href="{{ blinkie.href }}" rel="noopener noreferrer" target="_blank">{% endif %}
+        <img src="/cool-shit/blinkies/{{ blinkie.src }}" alt="{{ blinkie.alt }}" />
+      {% if blinkie.href %}</a>{% endif %}
+      {% endfor %}
+    </div>
+
+    <p style="margin-top: 12px;">Blinkie Sources:</p>
+    <div class="footer-sources">
+      {% for source in coolShit.sources %}
+      <a href="{{ source.href }}" rel="noopener noreferrer" target="_blank">
+        {% if source.img %}
+        <img src="{{ source.img }}" alt="{{ source.title }}" />
+        {% else %}
+        {{ source.title }}
+        {% endif %}
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+  <p class="copyright">&copy; 2022-2026 Reboot/Fitz.</p>
 </footer>

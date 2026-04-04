@@ -1,3 +1,6 @@
+# TODO: Dynamic build data
+./src/_data/buildData.json
+
 # Logs
 logs
 *.log
@@ -130,4 +133,3 @@ dist
 .pnp.*
 
 dist
-

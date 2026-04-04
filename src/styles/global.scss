@@ -34,7 +34,7 @@
 
   .footer-segs {
     flex-direction: column !important;
-    
+
     #footer-seg-1 {
       margin-bottom: 12px;
     }
@@ -93,20 +93,22 @@ a {
 
 a:visited {
   color: var(--color);
-}  
+}
 
 a:hover {
   color: var(--hover);
 }
 
 .nav-bar {
-  width: 100%;
+  width: calc(100% - 24px);
   min-height: 64px;
   display: flex;
   flex-direction: row;
   padding: 12px;
+  margin: 12px;
   align-items: center;
   justify-content: center;
+  border: 1px solid var(--hover);
 
   .nav-title {
     font-weight: bold;
@@ -218,6 +220,38 @@ a:hover {
       .footer-link {
         margin-right: 12px;
       }
+    }
+  }
+
+  .footer-cool-shit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+    width: 100%;
+    max-width: 100%;
+
+    .footer-buttons, .footer-blinkies {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+
+        a {
+            width: fit-content;
+            display: inline-block;
+        }
+    }
+
+    .footer-blinkies {
+        margin-top: 6px;
+    }
+
+    .footer-sources {
+        display: flex;
+        gap: 6px;
     }
   }
 
