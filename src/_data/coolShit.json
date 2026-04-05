@@ -17,7 +17,7 @@
     {
       "src": "piracy-now.gif",
       "alt": "Piracy Now!",
-      "href": "/s3cr3ts/piracy"
+      "href": "/s3cr3ts/sailing"
     },
     {
       "src": "play-ctf-now.gif",
@@ -117,6 +117,11 @@
       "alt": "Gay as fuck!"
     },
     {
+      "src": "plural-system.gif",
+      "alt": "Plural system!",
+      "href": "/s3cr3ts/system"
+    },
+    {
       "src": "polyamorous.gif",
       "alt": "Polyamourous."
     },
@@ -136,6 +141,19 @@
       "src": "are-we-alone.gif",
       "alt": "Are we alone?",
       "href": "https://en.wikipedia.org/wiki/Search_for_extraterrestrial_intelligence"
+    },
+    {
+      "src": "https://ipblinkie.maelstrom.dev/",
+      "alt": "Is this your IP?",
+      "href": "https://git.maelstrom.dev/maelstrom/ip-blinkie"
+    },
+    {
+      "src": "awrooo.gif",
+      "alt": "AWROOOOOOOO"
+    },
+    {
+      "src": "i-love-violence.gif",
+      "alt": "I love violence!"
     },
     {
       "src": "minecraft.gif",
@@ -252,9 +270,169 @@
     {
       "src": "achieving-sentience.gif",
       "alt": "Achieving sentience..."
+    },
+    {
+      "src": "violent-videogames.gif",
+      "alt": "I play violent videogames!"
+    },
+    {
+      "src": "command.gif",
+      "alt": "Waiting for your command."
+    },
+    {
+      "src": "too-many-tabs.gif",
+      "alt": "Too many tabs!"
+    },
+    {
+      "src": "open-24-hours.gif",
+      "alt": "Open 24 hours!"
+    }
+  ],
+  "stamps": [
+    {
+      "src": "yaoi.png",
+      "alt": "Yaoi. Surprise buttsex? Yes please."
+    },
+    {
+      "src": "i-love-my-laptop.png",
+      "alt": "I love my laptop!",
+      "href": "https://codeberg.org/Reboot-Codes/dotfiles"
+    },
+    {
+      "src": "sex-is-my-fav-drug.png",
+      "alt": "Sex is my favorite drug!"
+    },
+    {
+      "src": "my-sanctuary-is-a-hazard.jpg",
+      "alt": "My sanctuary is a biological hazard."
+    },
+    {
+      "src": "stupid-gay-shit.png",
+      "alt": "I do all kinds of stupid and gay shit."
+    },
+    {
+      "src": "abducted-by-aliens.png",
+      "alt": "I was abducted by aliens and all I got was this stupid stamp."
+    },
+    {
+      "src": "everybody-likes-a-faggot.gif",
+      "alt": "Everybody likes a faggot!"
+    },
+    {
+      "src": "pc-user.gif",
+      "alt": "PC User"
+    },
+    {
+      "src": "im-not-weird.gif",
+      "alt": "I'm not weird, you're just too normal."
+    },
+    {
+      "src": "i-love-music.gif",
+      "alt": "I love music."
+    },
+    {
+      "src": "1337-sp34k.png",
+      "alt": "Is fluent in leet speak."
+    },
+    {
+      "src": "you-are-an-idiot.gif",
+      "alt": "You are an idiot.",
+      "href": "https://youareanidiot.cc/"
+    },
+    {
+      "src": "i-love-spirals.gif",
+      "alt": "I love spirals."
+    },
+    {
+      "src": "comics-are-an-art-form.png",
+      "alt": "Comics are an art form.",
+      "href": "https://github.com/jobobby04/tachiyomisy"
+    },
+    {
+      "src": "i-love-physical-media.png",
+      "alt": "I love physical media!"
+    },
+    {
+      "src": "so-many-ideas.gif",
+      "alt": "So many ideas, so little time."
+    },
+    {
+      "src": "no-signal.gif",
+      "alt": "No Signal.",
+      "href": "http://websdr.org/"
+    },
+    {
+      "src": "citation-needed.png",
+      "alt": "Citation needed",
+      "href": "https://en.wikipedia.org/wiki/G%C3%A4vle_goat"
+    },
+    {
+      "src": "i-support-colon-three.jpg",
+      "alt": "I support colon three!"
+    },
+    {
+      "src": "i-support-repeating-stamps.png",
+      "alt": "I support having a million different stamps to say the same damn thing over and over."
+    },
+    {
+      "src": "gay-pride.png",
+      "alt": "Gay pride!"
+    },
+    {
+      "src": "i-support-derpy-ocs.gif",
+      "alt": "I support derpy OCs!"
+    },
+    {
+      "src": "flash-user.gif",
+      "alt": "Flash user.",
+      "href": "https://ruffle.rs/"
+    },
+    {
+      "src": "task-manager.gif",
+      "alt": "Task manager",
+      "href": "https://systeminformer.sourceforge.io/"
+    },
+    {
+      "src": "delete-system-32.gif",
+      "alt": "Delete System32.",
+      "href": "https://linuxmint.com/"
+    },
+    {
+      "src": "anarchy-is-coming.png",
+      "alt": "Anarchy is coming!"
+    },
+    {
+      "src": "dvd-bounce.gif",
+      "alt": "DVD logo bouncing.",
+      "href": "https://bouncingdvdlogo.com/"
+    },
+    {
+      "src": "geiger-counter-love-me.png",
+      "alt": "Geiger counters scream near me."
+    },
+    {
+      "src": "retro-video-games.gif",
+      "alt": "Retro videogames.",
+      "href": "https://vimm.net/"
+    },
+    {
+      "src": "level-up.gif",
+      "alt": "I don't have a birthday, I level up."
+    },
+    {
+      "src": "depends-on-the-computer.gif",
+      "alt": "My life depends on the computer."
+    },
+    {
+      "src": "pyro-tf2.gif",
+      "alt": "Pyro from TF2."
     }
   ],
   "sources": [
+    {
+      "title": "Maelstrom",
+      "href": "https://maelstrom.dev"
+    },
     {
       "title": "Adrian's Blinkie Collection",
       "href": "https://adriansblinkiecollection.neocities.org/"
@@ -263,6 +441,11 @@
       "title": "BLiNKiE NET",
       "img": "/cool-shit/buttons/blinkie-net.gif",
       "href": "https://blinkie-net.neocities.org/blinkcredit"
+    },
+    {
+      "title": "Blinkies Cafe",
+      "href": "https://blinkies.cafe",
+      "img": "/cool-shit/buttons/blinkies-cafe.gif"
     }
   ]
 }

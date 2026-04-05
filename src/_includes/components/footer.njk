@@ -26,7 +26,7 @@
     <div class="footer-buttons">
       {% for button in coolShit.buttons %}
       {% if button.href %}<a href="{{ button.href }}" rel="noopener noreferrer" target="_blank">{% endif %}
-        <img src="/cool-shit/buttons/{{ button.src }}" alt="{{ button.alt }}" />
+        <img src="{% if not (button.src | startsWith('http://')) or not (button.src | startsWith('https://')) %}/cool-shit/buttons/{% endif %}{{ button.src }}" alt="{{ button.alt }}" />
       {% if button.href %}</a>{% endif %}
       {% endfor %}
       {% if buildData.isNeocities %}
@@ -39,8 +39,16 @@
     <div class="footer-blinkies">
       {% for blinkie in coolShit.blinkies %}
       {% if blinkie.href %}<a href="{{ blinkie.href }}" rel="noopener noreferrer" target="_blank">{% endif %}
-        <img src="/cool-shit/blinkies/{{ blinkie.src }}" alt="{{ blinkie.alt }}" />
+        <img src="{% if not (blinkie.src | startsWith(blinkie.src, 'http://')) or not (blinkie.src | startsWith('https://')) %}/cool-shit/blinkies/{% endif %}{{ blinkie.src }}" alt="{{ blinkie.alt }}" />
       {% if blinkie.href %}</a>{% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="footer-stamps">
+      {% for stamp in coolShit.stamps %}
+      {% if stamp.href %}<a href="{{ stamp.href }}" rel="noopener noreferrer" target="_blank">{% endif %}
+        <img src="{% if not (stamp.src | startsWith(blinkie.src, 'http://')) or not (stamp.src | startsWith('https://')) %}/cool-shit/stamps/{% endif %}{{ stamp.src }}" alt="{{ stamp.alt }}" />
+      {% if stamp.href %}</a>{% endif %}
       {% endfor %}
     </div>
 

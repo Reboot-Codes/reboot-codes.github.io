@@ -78,7 +78,7 @@ module.exports = function (eleventyConfig) {
 			}
 		}
 	});
-
+	
 	eleventyConfig.addFilter("startsWith", function(str, comp) {
 		return str.startsWith(comp);
 	});

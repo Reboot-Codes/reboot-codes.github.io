@@ -1,0 +1,70 @@
+---
+title: Sailing Tutorials
+isSecret: true
+---
+
+<h1>Sailing Tutorials</h1>
+
+<p>Since you can't own shit anymore, crappy guides on "sailing the high seas".</p>
+
+<div class="static-page">
+
+    <h2 id="basic-setup">Basic setup</h2>
+
+    <p>To start with, please get a VPN. If you're like us and want to have lan-style access to all of your devices, <a href="https://tailscale.com/" target="_blank" rel="noopener noreferer">Tailscale</a> with the <a href="https://tailscale.com/docs/features/exit-nodes/mullvad-exit-nodes" target="_blank" rel="noopener noreferer">Mullvad Addon</a> is great and can be used for other things too!</p>
+
+    <p>Also, I suggest getting a torrenting client like the following:</p>
+
+    <ul>
+      <li><a href="https://www.qbittorrent.org/" target="_blank" rel="noopener noreferer">qBittorrent - QT bittorrenting app with a good API and web interface.</a></li>
+      <li><a href="https://motrix.app/" target="_blank" rel="noopener noreferer">Motrix - a really good download manager that can also torrent.</a></li>
+    </ul>
+
+    You will also want extra trackers:
+
+    <ul>
+      <li><a href="https://cf.trackerslist.com/best.txt" target="_blank" rel="noopener noreferer">TrackersList - Best</a></li>
+      <li><a href="https://github.com/ngosang/trackerslist" target="_blank" rel="noopener noreferer">ngosang/trackerslist</a></li>
+    </ul>
+
+    <p>If you have the bandwidth, please seed your torrents for at least 24 hours or more. If you can't, check out a debrid service like <a href="https://torbox.app/" target="_blank" rel="noopener noreferer">TorBox</a> which a) might be cool to have for Stremio (later on this page) b) will continue seeding your torrent if it wasn't already cached for 24 hours to 14 days!</p>
+
+    <h2 id="sites">Sites</h2>
+
+    <h3 id="guide-sites">Other Guides</h3>
+
+    <ul>
+      <li><a href="https://wiki.dbzer0.com/piracy/" target="_blank" rel="noopener noreferer">The c/Piracy Wiki</a></li>
+    </ul>
+
+    <h3 id="general-sites">General</h3>
+
+    <ul>
+      <li><a href="https://1337x.to/" target="_blank" rel="noopener noreferer">1337x</a> (also see <a href="https://1337x-status.org/" target="_blank" rel="noopener noreferer">their status page</a>)</li>
+      <li><a href="https://x1337x.cc/" target="_blank" rel="noopener noreferer">1337x backup</a></li>
+      <li><a href="http://l337xdarkkaqfwzntnfk5bmoaroivtl6xsbatabvlb52umg6v3ch44yd.onion/" target="_blank" rel="noopener noreferer">1337x over Tor</a> (see <a href="/s3cr3ts/deep-dark-web">Deep Dark Web Tutorials</a>)</li>
+      <li><a href="https://thepiratebay.org/" target="_blank" rel="noopener noreferer">TPB, of course.</a> (also see <a href="https://piratebayproxy.info/" target="_blank" rel="noopener noreferer">proxy info</a>)</li>
+      <li><a href="https://thehiddenbay.com/" target="_blank" rel="noopener noreferer">TPB alt proxy.</a></li>
+      <li><a href="http://uj3wazyk5u4hnvtk.onion" target="_blank" rel="noopener noreferer">TPB over Onion (also see deep dark web tutorials)</a></li>
+    </ul>
+
+    <h3 id="book-sites">Books</h3>
+
+    <ul>
+      <li><a href="https://annas-archive.gl/" target="_blank" rel="noopener noreferer">AA.gl</a></li>
+      <li><a href="https://annas-archive.pk/" target="_blank" rel="noopener noreferer">AA.pk</a></li>
+      <li><a href="https://annas-archive.gd/" target="_blank" rel="noopener noreferer">AA.gd</a></li>
+    </ul>
+
+    <h2 id="music">Music</h2>
+
+    <p>Music is pretty easy to get, just look for stuff on <a href="https://www.slsknet.org/news/node/1" target="_blank" rel="noopener noreferer">Soulseek</a> or automatically <a href="/utils/ytm-download.sh" target="_blank" rel="noopener noreferer">download your liked music from YouTube via this nifty script we wrote</a> (it uses <a href="https://github.com/yt-dlp/yt-dlp" target="_blank" rel="noopener noreferer">YT-DLP</a> and maybe <a href="https://www.ffmpeg.org/" target="_blank" rel="noopener noreferer">ffmpeg</a>; <a href="https://deno.com/" target="_blank" rel="noopener noreferer">deno</a> is also suggested to have for JS chalenges) :3</p>
+
+    <p>We have that setup to run every sunday via a <a href="https://codeberg.org/Reboot-Codes/dotfiles/src/commit/983d66128978474ffc152e11a7f9ead9c0ef44ee/nixos/custom-odin-nixos/configuration.nix#L179" target="_blank" rel="noopener noreferer">systemd timer</a>.</p>
+
+    <p><a href="https://www.strawberrymusicplayer.org/" target="_blank" rel="noopener noreferer">Strawberry</a> is a great music player, and will automatically add album art for you! There's also <a href="https://getmusicbee.com/" target="_blank" rel="noopener noreferer">MusicBee</a> (superb iTunes SmartPlaylist compatibility) and <a href="https://aimp.ru/" target="_blank" rel="noopener noreferer">AIMP</a> (Linux/Windows/Android, we personally use it on android).</p>
+
+    <h2 id="movies-and-shows">Movies and Shows</h2>
+
+    <p>Personally, I don't have a lot of spare storage, so I can't download everything I like to watch. <em>I'm working on that though, stay tuned! I plan to use <a href="https://jellyfin.org/" target="_blank" rel="noopener noreferer">Jellyfin</a> and qBittorrent.</em> So, instead, I use <a href="https://www.stremio.com/" target="_blank" rel="noopener noreferer">Stremio</a> to stream everything via <a href="http://torrentio.strem.fun/" target="_blank" rel="noopener noreferer">Torrents, using Torbox and Torrentio</a> or <a href="https://848b3516657c-usatv.baby-beamup.club/manifest.json" target="_blank" rel="noopener noreferer">The USA TV addon</a> (this is a manifest link to be used directly in Stremio, btw) for live tv... which doesn't work that well, but I don't really care too much.</p>
+</div>

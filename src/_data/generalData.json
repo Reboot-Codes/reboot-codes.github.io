@@ -9,6 +9,9 @@
   "workshop": {
     "title": "Reboot/Fitz's Workshop"
   },
+  "secrets": {
+    "title": "Reboot/Fitz's S3cr3ts!"
+  },
   "self": {
     "generalName": "Reboot/Fitz",
     "generalPronouns": "they/them",
@@ -16,38 +19,21 @@
       "dead_d0g": {
         "name": "Ryan",
         "username": "dead_d0g",
-        "preferredPronouns": [
-          "it/its",
-          "Pup"
-        ],
-        "discouragedPronouns": [
-          "he/him/his",
-          "they/them/theirs"
-        ],
-        "unacceptablePronouns": [
-          "she/her/hers"
-        ]
+        "preferredPronouns": ["it/its", "Pup"],
+        "discouragedPronouns": ["he/him/his", "they/them/theirs"],
+        "unacceptablePronouns": ["she/her/hers"]
       },
       "gh0st": {
         "name": "Hunter",
         "username": "g.h0st",
-        "preferredPronouns": [
-          "he/him/his",
-          "it/its",
-          "they/them/theirs"
-        ],
+        "preferredPronouns": ["he/him/his", "it/its", "they/them/theirs"],
         "discouragedPronouns": [],
-        "unacceptablePronouns": [
-          "she/her/hers"
-        ]
+        "unacceptablePronouns": ["she/her/hers"]
       },
       "fido": {
         "name": "Fido",
         "username": "fido",
-        "preferredPronouns": [
-          "it/its",
-          "they/them/theirs"
-        ],
+        "preferredPronouns": ["it/its", "they/them/theirs"],
         "discouragedPronouns": [],
         "unacceptablePronouns": []
       }
