@@ -7,100 +7,100 @@ const markdownItExternalAnchor = require('markdown-it-external-anchor');
 const prism = require('markdown-it-prism');
 
 module.exports = function (eleventyConfig) {
-	const md = markdownIt({ "html": true }).use(markdownItAnchor, { 
-		"level": 2,
-		permalink: markdownItAnchor.permalink.headerLink()
-	}).use(markdownItExternalAnchor, {
-		class: "link-external"
-	}).use(prism, {
-		highlightInlineCode: true,
-		plugins: [
-			"copy-to-clipboard",
-			"show-language",
-			"inline-color",
-			"toolbar"
-		]
-	});
+  const md = markdownIt({ "html": true }).use(markdownItAnchor, {
+    "level": 2,
+    permalink: markdownItAnchor.permalink.headerLink()
+  }).use(markdownItExternalAnchor, {
+    class: "link-external"
+  }).use(prism, {
+    highlightInlineCode: true,
+    plugins: [
+      "copy-to-clipboard",
+      "show-language",
+      "inline-color",
+      "toolbar"
+    ]
+  });
 
   eleventyConfig.setLibrary("md", md);
 
   eleventyConfig.addTemplateFormats("scss");
-	// Creates the extension for use
-	eleventyConfig.addExtension("scss", {
-		outputFileExtension: "css", // optional, default: "html"
+  // Creates the extension for use
+  eleventyConfig.addExtension("scss", {
+    outputFileExtension: "css", // optional, default: "html"
 
-		// `compile` is called once per .scss file in the input directory
-		compile: async function (inputContent) {
-			let result = sass.compileString(inputContent);
+    // `compile` is called once per .scss file in the input directory
+    compile: async function (inputContent) {
+      let result = sass.compileString(inputContent);
 
-			// This is the render function, `data` is the full data cascade
-			return async (data) => {
-				return result.css;
-			};
-		},
-	});
+      // This is the render function, `data` is the full data cascade
+      return async (data) => {
+        return result.css;
+      };
+    },
+  });
 
-	eleventyConfig.addPlugin(timeToRead, {
+  eleventyConfig.addPlugin(timeToRead, {
     speed: '250 words a minute'
   });
 
-	eleventyConfig.addCollection(
-		"allPosts",
-		function (collectionApi) {
-			return collectionApi.getFilteredByTags("post").sort((a, b) => (b.date - a.date)).filter((a) => {
-				return a.data.published != false;
-			});
-		}
-	);
+  eleventyConfig.addCollection(
+    "allPosts",
+    function (collectionApi) {
+      return collectionApi.getFilteredByTags("post").sort((a, b) => (b.date - a.date)).filter((a) => {
+        return a.data.published != false;
+      });
+    }
+  );
 
-	eleventyConfig.addCollection(
-		"allProjects",
-		function (collectionApi) {
-			return collectionApi.getFilteredByTags("project").sort((a, b) => (b.date - a.date));
-		}
-	);
+  eleventyConfig.addCollection(
+    "allProjects",
+    function (collectionApi) {
+      return collectionApi.getFilteredByTags("project").sort((a, b) => (b.date - a.date));
+    }
+  );
 
-	eleventyConfig.addPlugin(feedPlugin, {
-		type: "rss", // or "rss", "json"
-		outputPath: "/feed.xml",
-		collection: {
-			name: "allPosts",
-			limit: 0,
-		},
-		metadata: {
-			language: "en",
-			title: "Reboot/Fitz's Blog",
-			subtitle: "Bleh",
-			base: "https://www.reboot-codes.com/",
-			author: {
-				name: "Reboot/Fitz",
-				email: "hello@reboot-codes.com"
-			}
-		}
-	});
-	
-	eleventyConfig.addFilter("startsWith", function(str, comp) {
-		return str.startsWith(comp);
-	});
+  eleventyConfig.addPlugin(feedPlugin, {
+    type: "rss", // or "rss", "json"
+    outputPath: "/feed.xml",
+    collection: {
+      name: "allPosts",
+      limit: 0,
+    },
+    metadata: {
+      language: "en",
+      title: "Reboot/Fitz's Blog",
+      subtitle: "Bleh",
+      base: "https://www.reboot-codes.com/",
+      author: {
+        name: "Reboot/Fitz",
+        email: "hello@reboot-codes.com"
+      }
+    }
+  });
 
-	eleventyConfig.addFilter("strSlice", function(str, num) {
-		return str.slice(num);
-	});
+  eleventyConfig.addFilter("startsWith", function (str, comp) {
+    return str.startsWith(comp);
+  });
 
-	// Return all the tags used in a collection
-	eleventyConfig.addFilter("getAllTags", collection => {
-		let tagSet = new Set();
-		for(let item of collection) {
-			(item.data.tags || []).forEach(tag => tagSet.add(tag));
-		}
-		return Array.from(tagSet);
-	});
+  eleventyConfig.addFilter("strSlice", function (str, num) {
+    return str.slice(num);
+  });
 
-	eleventyConfig.addFilter("filterTagList", function filterTagList(tags) {
-		return (tags || []).filter(tag => ["all", "post", "allPosts", "project", "allProjects", "featuredProject"].indexOf(tag) === -1).filter((tag) => (!(tag.startsWith("project:"))));
-	});
+  // Return all the tags used in a collection
+  eleventyConfig.addFilter("getAllTags", collection => {
+    let tagSet = new Set();
+    for (let item of collection) {
+      (item.data.tags || []).forEach(tag => tagSet.add(tag));
+    }
+    return Array.from(tagSet);
+  });
 
-	const parseDate = (str) => {
+  eleventyConfig.addFilter("filterTagList", function filterTagList(tags) {
+    return (tags || []).filter(tag => ["all", "post", "allPosts", "project", "allProjects", "featuredProject"].indexOf(tag) === -1).filter((tag) => (!(tag.startsWith("project:"))));
+  });
+
+  const parseDate = (str) => {
     if (str instanceof Date) {
       return str;
     }
@@ -108,9 +108,9 @@ module.exports = function (eleventyConfig) {
   };
 
   const formatPart = (part, date) =>
-  new Intl.DateTimeFormat("en", part).format(date);
+    new Intl.DateTimeFormat("en", part).format(date);
 
-	eleventyConfig.addFilter("formatDate", async (obj) => {
+  eleventyConfig.addFilter("formatDate", async (obj) => {
     if (!obj) {
       return "";
     }
@@ -129,16 +129,20 @@ module.exports = function (eleventyConfig) {
     return `${month} ${day}, ${year}`;
   });
 
-	eleventyConfig.addPassthroughCopy({"src/public": "/"});
+  eleventyConfig.addPassthroughCopy({ "src/public": "/" });
+
+  eleventyConfig.addShortcode("safelink", (link, text) => {
+    return `<a href="${link}" rel="noopener noreferrer" target="_blank" class="safelink">${text}</a>`;
+  });
 
   return {
     dir: {
       input: "src",
       output: "dist",
       includes: "_includes",
-			layouts: "_includes/layouts",
+      layouts: "_includes/layouts",
     },
-		markdownTemplateEngine: "njk",
-		htmlTemplateEngine: "njk"
+    markdownTemplateEngine: "njk",
+    htmlTemplateEngine: "njk"
   }
 };

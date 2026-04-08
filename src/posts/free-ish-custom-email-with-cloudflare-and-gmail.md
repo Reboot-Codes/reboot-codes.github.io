@@ -2,6 +2,8 @@
 title: 'Free-ish and Custom Email'
 description: '"How to" on setting up CloudFlare and Gmail to create a nice, custom, email.'
 date: '2022-08-02T00:00:00-07:00'
+tags:
+  - tutorial
 ---
 
 Wait, what? This is a post detailing the process of setting up cloudflare email forwarding, adding Gmail's (free) SMTP server, and adding it to your existing email client. By the way, this isn't a tutorial on using Google Workspace, and is an active effort to **not** use it.

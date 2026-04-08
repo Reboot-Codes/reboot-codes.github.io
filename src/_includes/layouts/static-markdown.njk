@@ -1,0 +1,17 @@
+---
+layout: base.njk
+useContainer: true
+---
+
+<h1 class="big-post-title">{{ title }}</h1>
+{% if description %}
+<p class="big-post-description" style="margin-bottom: 6px;">{{ description }}</p>
+{% endif %}
+
+{% if (openGraph.imgUrl) %}
+<img id="ogimage" class="og-image" src="{{ openGraph.imgUrl }}">
+{% endif %}
+
+<div id="post-content" class="content">
+{{ content | safe }}
+<div>

@@ -256,6 +256,35 @@ a:hover {
         width: fit-content;
         display: inline-block;
       }
+
+      // This might get annoying on mobile, so we're gonna let them zoom in manually.
+      @media (min-width: 600px) {
+        img {
+          // Turning off anti-aliasing because these are basically pixel art.
+          image-rendering: optimizeSpeed;             // STOP SMOOTHING, GIVE ME SPEED
+          image-rendering: -moz-crisp-edges;          // Firefox
+          image-rendering: -o-crisp-edges;            // Opera
+          image-rendering: -webkit-optimize-contrast; // Chrome (and eventually Safari)
+          image-rendering: pixelated;                 // Universal support since 2021
+          image-rendering: optimize-contrast;         // CSS3 Proposed
+          -ms-interpolation-mode: nearest-neighbor;   // IE8+
+
+          @media (prefers-reduced-motion: no-preference) {
+            -webkit-transition-property: all;
+            transition-property: all;
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            -webkit-transition-timing-function: ease;
+            transition-timing-function: ease;
+          }
+
+          &:hover {
+            z-index: 999;
+            // Must be an even number to ensure it doesn't look like crap when fully scaled.
+            transform: scale(2);
+          }
+        }
+      }
     }
 
     .footer-blinkies,
@@ -294,6 +323,7 @@ a:hover {
   }
 }
 
+// For dem secrets ;3
 .static-page {
   max-width: 80ch;
   margin-left: auto;

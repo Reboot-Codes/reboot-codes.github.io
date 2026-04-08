@@ -12,12 +12,13 @@
     },
     {
       "src": "this-site-is-gay.gif",
-      "alt": "This site is gay!"
+      "alt": "This site is gay!",
+      "href": "/s3cr3ts"
     },
     {
       "src": "piracy-now.gif",
       "alt": "Piracy Now!",
-      "href": "/s3cr3ts/sailing"
+      "href": "/posts/sailing-tutorials/"
     },
     {
       "src": "play-ctf-now.gif",
