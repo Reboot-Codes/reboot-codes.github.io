@@ -1,6 +1,6 @@
 # Reboot/Fitz's Site
 
-![Last Commit](https://img.shields.io/github/last-commit/Reboot-Codes/new-rcgi) ![Repo Size](https://img.shields.io/github/languages/code-size/Reboot-Codes/new-rcgi?color=brightgreen) ![GitHub Actions Build Workflow Status](https://img.shields.io/github/actions/workflow/status/Reboot-Codes/new-rcgi/build.yml)
+![Last Commit](https://badges.reboot-codes.com/gitea/last-commit/Reboot-Codes/website?gitea_url=https%3A%2F%2Fgit.reboot-codes.com) ![Repo Size](https://badges.reboot-codes.com/github/languages/code-size/Reboot-Codes/new-rcgi?color=brightgreen&gitea_url=https%3A%2F%2Fgit.reboot-codes.com) ![GitHub Actions Build Workflow Status](https://img.shields.io/github/actions/workflow/status/Reboot-Codes/new-rcgi/build.yml)
 
 This is a remake of RCGI because it's kinda... jank. So, instead, we're using 11ty this go around.
 

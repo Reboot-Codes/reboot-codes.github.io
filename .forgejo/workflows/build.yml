@@ -1,0 +1,43 @@
+name: Build and Deploy Eleventy
+
+on:
+  push:
+    branches:
+      - "main"
+  workflow_dispatch:
+
+concurrency:
+  group: "web-deploy"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: github.server_url == 'https://git.reboot-codes.com'
+    runs-on: docker
+    container:
+      image: node:22-bookworm-slim
+      volumes:
+        # Host directory : Container directory : mode
+        - /var/www/reboot-codes.com:/deploy:rw
+    steps:
+      - name: Install sync dependencies
+        run: |
+          apt-get update && apt-get install -y rsync
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Enable Corepack & Yarn
+        run: |
+          corepack enable
+          corepack prepare yarn@stable --activate
+
+      - name: Install dependencies & build
+        run: |
+          yarn install --frozen-lockfile
+          yarn run build
+
+      - name: Sync to Caddy Webroot
+        run: |
+          # Sync output and ensure Caddy can read files (dirs 755, files 644)
+          rsync -av --delete --chmod=D755,F644 ./dist/ /deploy/
