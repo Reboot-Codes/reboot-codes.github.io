@@ -14,7 +14,7 @@ jobs:
   deploy:
     runs-on: docker
     container:
-      image: node:22-bookworm-slim
+      image: node:22-bookworm
       volumes:
         # Host directory : Container directory : mode
         - /var/www/reboot-codes.com:/deploy:rw
