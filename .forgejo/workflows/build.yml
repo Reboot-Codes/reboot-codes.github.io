@@ -29,7 +29,6 @@ jobs:
       - name: Enable Corepack & Yarn
         run: |
           corepack enable
-          corepack prepare yarn@stable --activate
 
       - name: Install dependencies & build
         run: |

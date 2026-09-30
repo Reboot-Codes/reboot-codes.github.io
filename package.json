@@ -1,5 +1,6 @@
 {
   "name": "rebootfitz-newsite",
+  "packageManager": "yarn@4.14.1",
   "scripts": {
     "build": "eleventy",
     "dev": "eleventy --serve"
