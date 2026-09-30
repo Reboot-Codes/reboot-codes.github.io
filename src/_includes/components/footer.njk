@@ -12,10 +12,30 @@
       </p>
       <div class="footer-links">
         {% for footerLink in footerLinks %}
-        {% set firstCharOfHref = (footerLink.href | first) %}
-        <a class="footer-link" {% if firstCharOfHref != "/" %} target="_blank" {% endif %} rel="noopener noreferrer" id="footer-link-item-{{ loop.index }}" href="{{ footerLink.href }}">
-          {{ footerLink.title }}
-        </a>
+          {% if footerLink.href %}
+            {% set firstCharOfHref = (footerLink.href | first) %}
+            {% set isExternalOrFeed = (firstCharOfHref != "/") or (footerLink.href.endsWith(".xml")) %}
+            <a
+              class="footer-link"
+              id="footer-link-item-{{ loop.index }}"
+              href="{{ footerLink.href }}"
+              {% if isExternalOrFeed %} target="_blank" rel="noopener noreferrer" {% endif %}
+            >
+              {% if footerLink.src %}
+                <img src="{{ footerLink.src }}" alt="{{ footerLink.alt | default(footerLink.title | default('Badge')) }}" />
+              {% else %}
+                {{ footerLink.title }}
+              {% endif %}
+            </a>
+          {% else %}
+            <span class="footer-link footer-badge" id="footer-link-item-{{ loop.index }}">
+              {% if footerLink.src %}
+                <img src="{{ footerLink.src }}" alt="{{ footerLink.alt | default('Badge') }}" />
+              {% else %}
+                {{ footerLink.title }}
+              {% endif %}
+            </span>
+          {% endif %}
         {% endfor %}
       </div>
     </div>

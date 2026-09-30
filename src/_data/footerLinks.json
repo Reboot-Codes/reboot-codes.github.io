@@ -10,5 +10,18 @@
   {
     "title": "Disclaimer",
     "href": "/disclaimer"
+  },
+  {
+    "alt": "Last Commit",
+    "src": "https://badges.reboot-codes.com/gitea/last-commit/Reboot-Codes/website?gitea_url=https%3A%2F%2Fgit.reboot-codes.com"
+  },
+  {
+    "alt": "Repo Size",
+    "src": "https://badges.reboot-codes.com/github/languages/code-size/Reboot-Codes/new-rcgi?color=brightgreen&gitea_url=https%3A%2F%2Fgit.reboot-codes.com"
+  },
+  {
+    "alt": "Forgejo Actions Build Workflow Status",
+    "src": "https://git.reboot-codes.com/Reboot-Codes/website/actions/workflows/build.yml/badge.svg?label=build%20status",
+    "href": "https://git.reboot-codes.com/Reboot-Codes/website/actions?actor=0&status=0"
   }
 ]
