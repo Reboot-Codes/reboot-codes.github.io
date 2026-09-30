@@ -230,10 +230,11 @@ a:hover {
 
       .footer-link {
         margin-right: 12px;
-        display: inline-block !important;
+        display: inline-block;
 
         img {
           margin-top: 6px;
+          display: inline-block;
         }
       }
     }
