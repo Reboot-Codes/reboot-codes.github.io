@@ -12,7 +12,6 @@ concurrency:
 
 jobs:
   deploy:
-    if: github.server_url == 'https://git.reboot-codes.com'
     runs-on: docker
     container:
       image: node:22-bookworm-slim
