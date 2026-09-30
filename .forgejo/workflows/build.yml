@@ -33,7 +33,7 @@ jobs:
 
       - name: Install dependencies & build
         run: |
-          yarn install --frozen-lockfile
+          yarn install --immutable
           yarn run build
 
       - name: Sync to Caddy Webroot
